@@ -1,6 +1,6 @@
 #J-albums
 
-J-albums is an albums apps supported by  thinkjs and angularAMD
+J-albums is an albums apps which use thinkjs and react-canvas.
 
 ### start
 
@@ -12,7 +12,7 @@ node www/index.js
 
 about more config you can see [thinkjs](https://github.com/75team/thinkjs)
 
-we also use [angularAMD](https://github.com/marcoslin/angularAMD).It is really a good practice for angulay apps.
+we also use [react-canvas](https://github.com/Flipboard/react-canvas).It is really amazing experience for images apps.
 
 
 ### thanks 
