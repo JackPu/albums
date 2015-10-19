@@ -4,7 +4,9 @@
   "version": "0.1.0",
   "author": {},
   "dependencies": {
-    "thinkjs": "*"
+    "thinkjs": "*",
+    "mongoose": "*",
+    "gulp": "*",
   },
   "keywords": [],
   "repository": {
