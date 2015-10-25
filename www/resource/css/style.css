@@ -107,7 +107,15 @@ a{
     font-size: 1.2rem;
     padding-bottom: .25rem;
 }
-
+@media all and (min-width:1120px){
+    .header{
+        background-size: 100% auto;
+    }
+    .container{
+        width: 1120px;
+        margin: 0 auto;
+    }
+}
 
 .tag-list {
     margin-top: .9rem;
@@ -217,6 +225,14 @@ a{
     line-height: 2rem;
     color:#555;
 }
+@media all and (min-width:1120px){
+    .post-item {
+	   width: 22.5%;
+       margin:1.25%;
+       padding-top: 22.5% !important;
+    }
+}
+
 @media all and (max-width:764px){
     .post-item {
 	   width: 45%;
