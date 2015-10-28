@@ -7,6 +7,8 @@ module.exports = Controller("Home/BaseController", function () {
     return {
         indexAction: function () {
             //render View/Home/index_index.html file
+            var navModel = thinkRequire("NavModel");
+            
             this.display();
         },
         
