@@ -1,16 +1,33 @@
 #J-albums
 
-J-albums is an albums apps which use thinkjs and angular.
+J-albums is an albums apps which use thinkjs(2.0) and angular.
 
 ### start
 
 ```shell
+git clone https://github.com/JackPu/albums.git
 
-node www/index.js
+# cd your this project path
+
+cd albums
+
+
+npm install 
+
+# if you met some trouble in npm installing,you can change the registry source 
+
+# npm install thinkjs -g --registry=https://registry.npm.taobao.org --verbose
+npm start
+
+## we use es-6 ,so we need to run another command after start
+
+npm run watch-compile
+ 
+node www/idnex.js
 
 ```
 
-about more config you can see [thinkjs](https://github.com/75team/thinkjs)
+about more configuration you can view [thinkjs](https://github.com/75team/thinkjs)
 
 we also use [react-canvas](https://github.com/Flipboard/react-canvas).It is really amazing experience for images apps.
 
@@ -45,4 +62,3 @@ This is My albums http://design.jackpu.com
 ### Thanks 
 
 Design by Carl Hauser https://dribbble.com/carlhauser
-

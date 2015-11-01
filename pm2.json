@@ -1,0 +1,14 @@
+{
+  "apps": [{
+    "name": "project",
+    "script": "www/production.js",
+    "cwd": "/Applications/XAMPP/xamppfiles/htdocs/puhuan/project",
+    "max_memory_restart": "1G",
+    "autorestart": true,
+    "node_args": [],
+    "args": [],
+    "env": {
+      
+    }
+  }]
+}
