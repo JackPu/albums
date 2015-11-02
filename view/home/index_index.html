@@ -50,8 +50,9 @@
     <div class="main">
         <div class="container">
             <div class="tag-list">
-                <a href="">Web</a>
-                <a href="" class="selected">UI</a>
+                <%nav.forEach(function(item)){%>
+                    <a href="tag"><%=item%></a>
+                <%}%>
             </div>
             <div class="posts-list">
                 <div class="post-item col-3">

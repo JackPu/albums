@@ -13,25 +13,34 @@ var _baseJs = require('./base.js');
 var _baseJs2 = _interopRequireDefault(_baseJs);
 
 var _default = (function (_Base) {
-  _inherits(_default, _Base);
+    _inherits(_default, _Base);
 
-  function _default() {
-    _classCallCheck(this, _default);
+    function _default() {
+        _classCallCheck(this, _default);
 
-    _Base.apply(this, arguments);
-  }
+        _Base.apply(this, arguments);
+    }
 
-  /**
-   * index action
-   * @return {Promise} []
-   */
+    /**
+     * index action
+     * @return {Promise} []
+     */
 
-  _default.prototype.indexAction = function indexAction() {
-    //auto render template file index_index.html
-    return this.display();
-  };
+    _default.prototype.indexAction = function indexAction() {
+        //auto render template file index_index.html
+        var model = this.model("user");
+        var data = model.select();
+        this.assign("nav", data);
+        return this.display();
+    };
 
-  return _default;
+    _default.prototype.apiAction = function apiAction() {
+        var model = this.model("user");
+        var data = model.select();
+        return this.display();
+    };
+
+    return _default;
 })(_baseJs2['default']);
 
 exports['default'] = _default;
