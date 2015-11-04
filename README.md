@@ -27,9 +27,10 @@ node www/idnex.js
 
 ```
 
-about more configuration you can view [thinkjs](https://github.com/75team/thinkjs)
+About more configuration you can view [thinkjs](https://github.com/75team/thinkjs)
 
-we also use [react-canvas](https://github.com/Flipboard/react-canvas).It is really amazing experience for images apps.
+We also use [angula-AMD](https://github.com/marcoslin/angularAMD) and [react-canvase](https://github.com/Flipboard/react-canvas)
+
 
 
 
