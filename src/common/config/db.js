@@ -5,12 +5,13 @@
  */
 export default {
   type: 'mongo',
-  host: '127.0.0.1',
+ // host: '127.0.0.1',
+  host: '52.26.145.56',
   port: '',
   name: '',
   user: '',
   pwd: '',
-  prefix: '',
+  prefix: 'ja_',
   encoding: 'utf8',
   nums_per_page: 12,
   log_sql: true,

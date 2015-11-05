@@ -6,14 +6,15 @@
 exports.__esModule = true;
 exports['default'] = {
   type: 'mongo',
-  host: '127.0.0.1',
+  // host: '127.0.0.1',
+  host: '52.26.145.56',
   port: '',
   name: '',
   user: '',
   pwd: '',
-  prefix: 'think_',
+  prefix: 'ja_',
   encoding: 'utf8',
-  nums_per_page: 10,
+  nums_per_page: 12,
   log_sql: true,
   log_connect: true,
   cache: {

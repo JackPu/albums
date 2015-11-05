@@ -27,7 +27,16 @@ var _default = (function (_think$model$mongo) {
 
         (_think$model$mongo$prototype$init = _think$model$mongo.prototype.init).call.apply(_think$model$mongo$prototype$init, [this].concat(args));
         //配置索引
-        this.indexes = {};
+        this.indexes = {
+            id: 1
+        };
+    };
+
+    _default.prototype.addNav = function addNav() {
+        return this.add({
+            name: 'UI',
+            desc: 'UI'
+        });
     };
 
     return _default;
