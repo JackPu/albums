@@ -32,6 +32,11 @@ About more configuration you can view [thinkjs](https://github.com/75team/thinkj
 We also use [angula-AMD](https://github.com/marcoslin/angularAMD) and [react-canvase](https://github.com/Flipboard/react-canvas)
 
 
+### NOSQL
+
+We use mongodb as our database.You can view [mongodb](https://www.mongodb.com) offical to get some basic knowledge of mongodb.
+Also Thinkjs author has write some [document](https://thinkjs.org/zh-CN/doc/2.0/model_mongodb.html) and made an [thinkjs-mongo-seed]()
+
 
 
 ### release 
