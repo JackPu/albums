@@ -12,10 +12,16 @@ export default class extends think.model.mongo {
         }
     }
 
-    addNav() {
+    addPost() {
         return this.add({
             title: 'UI',
-            contents: 'UI'
+            contents: 'UI',
+            tags:['ui'],
+            url: '',
+            nav: 1,
+            like: 0
+            
         })
     }
+    
 }

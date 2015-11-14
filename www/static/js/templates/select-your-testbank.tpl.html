@@ -1,0 +1,78 @@
+<div class="m-select-your-testbank  {{ setClass }}">
+    <div class="main-control">
+        <ul class="main-item-list">
+            <li ng-repeat="page in detailsList">
+               {{ $index + 1}}
+            </li>  
+        </ul>
+        
+        <button type="button" ng-click="finishEvent()" class="btn btn-primary fui-check"> 完成</button>
+        <button type="button" ng-click="hide()" class="btn btn-cancel fui-cross"> 取消</button>
+    </div>
+    <div class="testbank-list">
+        <h4>我的题目</h4>
+        <div class="m-form">
+            <div class="btn-group">
+                    <input type="text" ng-model="query"  placeholder="出题名称" class="text js-query-words" style="width:170px;" />
+                    <button class="btn btn-primary js-search" ng-click="searchTestbankEvent()"><span class="fui-search"></span></button>
+            </div>
+            <div class="form-element">
+                <label>
+                    <input type="checkbox" class="js-query-type" value="1" />
+                    <span class="label">我的题目</span>
+                </label>
+            </div>
+        </div>
+        <ul class="list">
+            <li dir-paginate="item in list | itemsPerPage: pagesize" total-items="totalCount" current-page="currentPage" ng-click="seleteItem($event)">
+                <a ng-click="getDetailsEvent($event)">{{ item.char64_testbank_name }}</a>
+            </li>
+            <li ng-show="list.length==0">暂无内容</li>
+        </ul>       
+        <dir-pagination-controls boundary-links="true" on-page-change="pageChange(newPageNumber)"></dir-pagination-controls> 
+    </div>
+    <div class="thum-page-tabs">
+        <div class="tab" ng-repeat="page in detailsList">
+            <div class="num">{{ $index + 1}}</div>
+        </div>
+    </div>
+    <div class="testbank-details">
+        
+        <div class="thum-page" ng-repeat="page in detailsList">
+           
+            <div class="thum-detail">
+                 <div class="btn-list">
+                     <a  class="btn-circle" ng-click="addOneEvent($event,$index)">
+                        <span class="fui-plus"></span>
+                        <span class="tips">添加题目</span>
+                    </a>
+                     <a  class="btn-circle btn-remove g-hidden" ng-click="removeOneEvent($event,$index) ">
+                        <span class="fui-cross"></span>
+                        <span class="tips">取消题目</span>
+                    </a>
+                </div>
+                <div class="preview-form form" ng-hide="finishedAll" >
+
+                    <div class="form-group">
+                        题目{{ $index + 1  }}:{{ page.exercise_name  }}
+                    </div>
+                    <div class="row img-list2">
+                        <div class="col-md-4">
+                            <div class="item" data-val="A"><img ng-src="{{ page['exercise_answer_a'] }}" /></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item" data-val="B"><img ng-src="{{ page['exercise_answer_b'] }}" /></div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="item" data-val="C"><img src="{{ page['exercise_answer_c'] }}" /></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="thum-page error-exercise" ng-show="detailsList.length==0">
+           
+        </div>
+ 
+    </div>
+</div>

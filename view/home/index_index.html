@@ -3,85 +3,12 @@
 <% include ../common/header.html %>
 
 <body>
-<div id="page">
-    <div class="header">
-        <div class="over-layout"></div>
-        <div class="container">
-            <header class="top-nav">
-                    <span class="username">Jack Pu </span>
-                    <img class="avantar" src="/static/img/my-photos.jpg" />
-            </header>
-            <div class="profile">
-                <img class="avantar" src="/static/img/my-photos.jpg" />
-                <div class="profile-details">
-                    <div class="username">Jack Pu</div>
-                    <div class="address"><span class="icon-location"></span> Beijing China</div>
-                    <div class="social-group">
-                        <a href="" class="icon-instagram" title="instagram"></a>
-                        <a href="" class="icon-google-plus" title="google-plus"></a>
-                        <a href="" class="icon-sina-weibo" title="sina-weibo"></a>
-                    </div>
-                </div>
-                <div class="basic-num">
-                    <div class="item">
-                        <div class="num">
-                            12
-                        </div>
-                        Designs
-                    </div>
-                    <div class="item">
-                        <div class="num">
-                            12
-                        </div>
-                        Photography
-                    </div>
-                    <div class="item">
-                        <div class="num">
-                            12
-                        </div>
-                        Collections
-                    </div>
-                </div>
+    <div id="page"  ng-app>
+        <div ng-view></div>
+    </div>
 
-            </div>
-        </div>
-    </div>
-    
-    <div class="main">
-        <div class="container">
-            <div class="tag-list">
-                <%nav.forEach(function(item){%>
-                    <a href="tag"><%=item%></a>
-                <%})%>
-            </div>
-            <div class="posts-list">
-                <div class="post-item col-3">
-                    <img src="/static/img/2.jpg" />
-                    <div class="like-num-wrap">
-                        <span class="icon-heart"></span>
-                        <span class="num">100</span>
-                    </div>
-                    <div class="details">
-                        <div class="title">remenber</div>
-                    </div>
-                </div>
-                <div class="post-item col-3">
-                    <img src="/static/img/3.jpg" />
-                    <div class="details">
-                        <div class="title">remenber</div>
-                    </div>
-                </div>
-                <div class="post-item col-3">
-                    <img src="/static/img/1.jpg" />
-                    <div class="details">
-                        <div class="title">remenber</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</div>
+
+<% include ../common/footer.html %>
 </body>
 
 </html>

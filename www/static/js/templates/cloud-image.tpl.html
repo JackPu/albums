@@ -1,0 +1,198 @@
+<div class="m-cloud-image" ng-show="showStatus">
+
+    
+    <!--svg icon-->
+<svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<defs>
+<symbol id="icon-zoom-in" viewBox="0 0 1024 1024">
+	<title>zoom-in</title>
+	<path class="path1" d="M426.667 42.667q78 0 149.167 30.5t122.5 81.833 81.833 122.5 30.5 149.167q0 67-21.833 128.333t-62.167 111.333l242.333 242q12.333 12.333 12.333 30.333 0 18.333-12.167 30.5t-30.5 12.167q-18 0-30.333-12.333l-242-242.333q-50 40.333-111.333 62.167t-128.333 21.833q-78 0-149.167-30.5t-122.5-81.833-81.833-122.5-30.5-149.167 30.5-149.167 81.833-122.5 122.5-81.833 149.167-30.5zM426.667 128q-60.667 0-116 23.667t-95.333 63.667-63.667 95.333-23.667 116 23.667 116 63.667 95.333 95.333 63.667 116 23.667 116-23.667 95.333-63.667 63.667-95.333 23.667-116-23.667-116-63.667-95.333-95.333-63.667-116-23.667zM426.667 256q17.667 0 30.167 12.5t12.5 30.167v85.333h85.333q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-85.333v85.333q0 17.667-12.5 30.167t-30.167 12.5-30.167-12.5-12.5-30.167v-85.333h-85.333q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5h85.333v-85.333q0-17.667 12.5-30.167t30.167-12.5z"></path>
+</symbol>
+<symbol id="icon-zoom-out" viewBox="0 0 1024 1024">
+	<title>zoom-out</title>
+	<path class="path1" d="M426.667 42.667q78 0 149.167 30.5t122.5 81.833 81.833 122.5 30.5 149.167q0 67-21.833 128.333t-62.167 111.333l242.333 242q12.333 12.333 12.333 30.333 0 18.333-12.167 30.5t-30.5 12.167q-18 0-30.333-12.333l-242-242.333q-50 40.333-111.333 62.167t-128.333 21.833q-78 0-149.167-30.5t-122.5-81.833-81.833-122.5-30.5-149.167 30.5-149.167 81.833-122.5 122.5-81.833 149.167-30.5zM426.667 128q-60.667 0-116 23.667t-95.333 63.667-63.667 95.333-23.667 116 23.667 116 63.667 95.333 95.333 63.667 116 23.667 116-23.667 95.333-63.667 63.667-95.333 23.667-116-23.667-116-63.667-95.333-95.333-63.667-116-23.667zM298.667 384h256q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-256q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"></path>
+</symbol>
+<symbol id="icon-circle-plus" viewBox="0 0 1024 1024">
+	<title>circle-plus</title>
+	<path class="path1" d="M512 42.667q95.667 0 182.5 37.167t149.667 100 100 149.667 37.167 182.5-37.167 182.5-100 149.667-149.667 100-182.5 37.167-182.5-37.167-149.667-100-100-149.667-37.167-182.5 37.167-182.5 100-149.667 149.667-100 182.5-37.167zM512 128q-78 0-149.167 30.5t-122.5 81.833-81.833 122.5-30.5 149.167 30.5 149.167 81.833 122.5 122.5 81.833 149.167 30.5 149.167-30.5 122.5-81.833 81.833-122.5 30.5-149.167-30.5-149.167-81.833-122.5-122.5-81.833-149.167-30.5zM512 298.667q17.667 0 30.167 12.5t12.5 30.167v128h128q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-128v128q0 17.667-12.5 30.167t-30.167 12.5-30.167-12.5-12.5-30.167v-128h-128q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5h128v-128q0-17.667 12.5-30.167t30.167-12.5z"></path>
+</symbol>
+<symbol id="icon-circle-minus" viewBox="0 0 1024 1024">
+	<title>circle-minus</title>
+	<path class="path1" d="M512 42.667q95.667 0 182.5 37.167t149.667 100 100 149.667 37.167 182.5-37.167 182.5-100 149.667-149.667 100-182.5 37.167-182.5-37.167-149.667-100-100-149.667-37.167-182.5 37.167-182.5 100-149.667 149.667-100 182.5-37.167zM512 128q-78 0-149.167 30.5t-122.5 81.833-81.833 122.5-30.5 149.167 30.5 149.167 81.833 122.5 122.5 81.833 149.167 30.5 149.167-30.5 122.5-81.833 81.833-122.5 30.5-149.167-30.5-149.167-81.833-122.5-122.5-81.833-149.167-30.5zM341.333 469.333h341.333q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-341.333q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5z"></path>
+</symbol>
+<symbol id="icon-circle-check" viewBox="0 0 1024 1024">
+	<title>circle-check</title>
+	<path class="path1" d="M512 42.667q95.667 0 182.5 37.167t149.667 100 100 149.667 37.167 182.5-37.167 182.5-100 149.667-149.667 100-182.5 37.167-182.5-37.167-149.667-100-100-149.667-37.167-182.5 37.167-182.5 100-149.667 149.667-100 182.5-37.167zM512 128q-78 0-149.167 30.5t-122.5 81.833-81.833 122.5-30.5 149.167 30.5 149.167 81.833 122.5 122.5 81.833 149.167 30.5 149.167-30.5 122.5-81.833 81.833-122.5 30.5-149.167-30.5-149.167-81.833-122.5-122.5-81.833-149.167-30.5zM655.667 383.667q17.667 0 30.167 12.5t12.5 30.167-12.667 30.333l-181 181q-12.333 12.333-30 12.333-18 0-30.333-12.333l-90.667-90.333q-12.333-12.333-12.333-30.333 0-17.667 12.5-30.167t30.167-12.5 30.333 12.667l60.333 60.333 150.667-151q12.667-12.667 30.333-12.667z"></path>
+</symbol>
+<symbol id="icon-circle-cross" viewBox="0 0 1024 1024">
+	<title>circle-cross</title>
+	<path class="path1" d="M512 42.667q95.667 0 182.5 37.167t149.667 100 100 149.667 37.167 182.5-37.167 182.5-100 149.667-149.667 100-182.5 37.167-182.5-37.167-149.667-100-100-149.667-37.167-182.5 37.167-182.5 100-149.667 149.667-100 182.5-37.167zM512 128q-78 0-149.167 30.5t-122.5 81.833-81.833 122.5-30.5 149.167 30.5 149.167 81.833 122.5 122.5 81.833 149.167 30.5 149.167-30.5 122.5-81.833 81.833-122.5 30.5-149.167-30.5-149.167-81.833-122.5-122.5-81.833-149.167-30.5zM632.667 348.333q17.667 0 30.333 12.5t12.667 30.167-12.667 30.333l-90.667 90.667 90.667 90.333q12.667 12.667 12.667 30 0 17.667-12.667 30.167t-30.333 12.5-30-12.333l-90.667-90.333-90.333 90.333q-12.333 12.333-30.333 12.333-17.667 0-30.167-12.333t-12.5-30q0-18 12.333-30.333l90.667-90.333-90.667-90.667q-12.333-12.333-12.333-30t12.5-30.333 30.167-12.667 30.333 12.667l90.333 90.667 90.667-90.667q12.667-12.667 30-12.667z"></path>
+</symbol>
+<symbol id="icon-rewind" viewBox="0 0 1024 1024">
+	<title>rewind</title>
+	<path class="path1" d="M768 170.667q17.667 0 30.167 12.5t12.5 30.167-12.667 30.333l-268.333 268.333 268.333 268.333q12.667 12.667 12.667 30.333t-12.5 30.167-30.167 12.5q-18 0-30.333-12.333l-298.667-298.667q-12.333-12.333-12.333-30.333t12.333-30.333l298.667-298.667q12.333-12.333 30.333-12.333zM512 170.667q17.667 0 30.167 12.5t12.5 30.167-12.667 30.333l-268.333 268.333 268.333 268.333q12.667 12.667 12.667 30.333t-12.5 30.167-30.167 12.5q-18 0-30.333-12.333l-298.667-298.667q-12.333-12.333-12.333-30.333t12.333-30.333l298.667-298.667q12.333-12.333 30.333-12.333z"></path>
+</symbol>
+<symbol id="icon-fast-forward" viewBox="0 0 1024 1024">
+	<title>fast-forward</title>
+	<path class="path1" d="M469.333 170.667q17.667 0 30 12.333l298.667 298.667q12.667 12.667 12.667 30.333t-12.667 30.333l-298.667 298.667q-12.333 12.333-30 12.333t-30.167-12.5-12.5-30.167q0-18 12.333-30.333l268.333-268.333-268.333-268.333q-12.333-12.333-12.333-30.333 0-18.333 12.167-30.5t30.5-12.167zM213.333 170.667q17.667 0 30 12.333l298.667 298.667q12.667 12.667 12.667 30.333t-12.667 30.333l-298.667 298.667q-12.333 12.333-30 12.333t-30.167-12.5-12.5-30.167q0-18 12.333-30.333l268.333-268.333-268.333-268.333q-12.333-12.333-12.333-30.333 0-18.333 12.167-30.5t30.5-12.167z"></path>
+</symbol>
+<symbol id="icon-cloud-upload" viewBox="0 0 1024 1024">
+	<title>cloud-upload</title>
+	<path class="path1" d="M640 85.333q78 0 149.167 30.5t122.5 81.833 81.833 122.5 30.5 149.167q0 72.667-26.5 139.667t-72 117.333-108.667 83.5-134.167 41.167v-86q71.667-10.333 130.167-51.833t92.167-105.667 33.667-138.167q0-60.667-23.667-116t-63.667-95.333-95.333-63.667-116-23.667q-55.333 0-106.5 19.833t-90 53.833-65 81.333-33.833 101h-88.667q-70.667 0-120.667 50t-50 120.667q0 38.667 15.167 71.667t39.833 54.167 54.833 33 60.833 11.833h170.667v85.333h-170.667q-69.667 0-128.5-34.333t-93.167-93.167-34.333-128.5 34.333-128.5 93.167-93.167 128.5-34.333h22q26.333-74.333 79.333-132.167t126.833-90.833 155.833-33zM554.667 426.667q17.667 0 30.333 12.667l128 128q12.333 12.333 12.333 30 0 18.333-12.167 30.5t-30.5 12.167q-18 0-30.333-12.333l-55-55.333v281q0 17.667-12.5 30.167t-30.167 12.5-30.167-12.5-12.5-30.167v-281l-55 55.333q-12.333 12.333-30.333 12.333-17.667 0-30.167-12.5t-12.5-30.167q0-17 12.333-30l128-128q12.667-12.667 30.333-12.667z"></path>
+</symbol>
+<symbol id="icon-cloud-download" viewBox="0 0 1024 1024">
+	<title>cloud-download</title>
+	<path class="path1" d="M640 85.333q78 0 149.167 30.5t122.5 81.833 81.833 122.5 30.5 149.167q0 85-35 160.667t-96.667 129.167-140 77.5l21-20.667q18-18.333 28-42.667 9.333-22.667 9.333-49.333 0-6.667-0.333-9.333 59.333-41.333 93.833-105.833t34.5-139.5q0-60.667-23.667-116t-63.667-95.333-95.333-63.667-116-23.667q-55.333 0-106.5 19.833t-90 53.833-65 81.333-33.833 101h-88.667q-70.667 0-120.667 50t-50 120.667q0 38.667 15.167 71.667t39.833 54.167 54.833 33 60.833 11.833h50q11.667 29.333 30 48l37.667 37.333h-117.667q-69.667 0-128.5-34.333t-93.167-93.167-34.333-128.5 34.333-128.5 93.167-93.167 128.5-34.333h22q26.333-74.333 79.333-132.167t126.833-90.833 155.833-33zM554.667 426.667q17.667 0 30.167 12.5t12.5 30.167v281l55-55.333q12.333-12.333 30.333-12.333 18.333 0 30.5 12.167t12.167 30.5q0 18-12.333 30.333l-128 128q-12.333 12.333-30.333 12.333t-30.333-12.333l-128-128q-12.333-13-12.333-30.333 0-17.667 12.5-30.167t30.167-12.5q18 0 30.333 12.333l55 55.333v-281q0-17.667 12.5-30.167t30.167-12.5z"></path>
+</symbol>
+<symbol id="icon-star" viewBox="0 0 1024 1024">
+	<title>star</title>
+	<path class="path1" d="M396.667 384l115.333-355 115.333 355h373.333l-302 209.667 115.333 348.667-302-221-302 219.333 115.333-347-302-209.667h373.333zM565.333 469.333l-53.333-169.667-53.333 169.667h-165.667l133.333 88.333-52.333 157.667 138.333-100 137.667 101-52.333-157.667 133-89.333h-165.333z"></path>
+</symbol>
+<symbol id="icon-trash" viewBox="0 0 1024 1024">
+	<title>trash</title>
+	<path class="path1" d="M426.667 42.667h170.667q53 0 90.5 37.5t37.5 90.5v42.667h170.667q17.667 0 30.167 12.5t12.5 30.167-12.5 30.167-30.167 12.5h-42.667v512q0 53-37.5 90.5t-90.5 37.5h-426.667q-53 0-90.5-37.5t-37.5-90.5v-512h-42.667q-17.667 0-30.167-12.5t-12.5-30.167 12.5-30.167 30.167-12.5h170.667v-42.667q0-53 37.5-90.5t90.5-37.5zM768 810.667v-512h-512v512q0 17.667 12.5 30.167t30.167 12.5h426.667q17.667 0 30.167-12.5t12.5-30.167zM597.333 128h-170.667q-17.667 0-30.167 12.5t-12.5 30.167v42.667h256v-42.667q0-17.667-12.5-30.167t-30.167-12.5z"></path>
+</symbol>
+<symbol id="icon-check" viewBox="0 0 1024 1024">
+	<title>check</title>
+	<path class="path1" d="M896 213.333q18.333 0 30.5 12.167t12.167 30.5q0 18-12.333 30.333l-512 512q-12.333 12.333-30.333 12.333t-30.333-12.333l-256-256q-12.333-12.333-12.333-30.333 0-18.333 12.167-30.5t30.5-12.167q18 0 30.333 12.333l225.667 226 481.667-482q12.333-12.333 30.333-12.333z"></path>
+</symbol>
+<symbol id="icon-cross" viewBox="0 0 1024 1024">
+	<title>cross</title>
+	<path class="path1" d="M810.667 170.667q18.333 0 30.5 12.167t12.167 30.5q0 18-12.333 30.333l-268.667 268.333 268.667 268.333q12.333 12.333 12.333 30.333 0 18.333-12.167 30.5t-30.5 12.167q-18 0-30.333-12.333l-268.333-268.667-268.333 268.667q-12.333 12.333-30.333 12.333-18.333 0-30.5-12.167t-12.167-30.5q0-18 12.333-30.333l268.667-268.333-268.667-268.333q-12.333-12.333-12.333-30.333 0-18.333 12.167-30.5t30.5-12.167q18 0 30.333 12.333l268.333 268.667 268.333-268.667q12.333-12.333 30.333-12.333z"></path>
+</symbol>
+</defs>
+</svg>
+    
+<!--end svg icon-->
+    
+    
+    
+    <div class="ci-header" ng-hide="selectedList.length>0">
+        <a class="ci-logo"></a>选择图片
+        <div class="btn-close" ng-click="hide()">
+            <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>   
+        </div>
+    </div>
+    <div class="ci-header selected" ng-show="selectedList.length>0">
+        <div class="btn-close" ng-click="hide()">
+            <svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg>
+        </div>
+        {{ selectedList.length }} 张图片选中
+        <div class="btn-list">
+            <button type="button" class="btn btn-default" ng-click="sendEvent()">  <svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg> 确定</button>
+            <button type="button" class="btn btn-default" ng-click="cancelSelectEvent()">取消</button>
+        </div>
+    </div>
+    <div class="ci-aside">
+        <ul>
+            <li>
+                <a href="" ng-click="viewMyImageEvent()" ng-class="{'selected':isMine==1}">最近图片</a>
+            </li>
+            <li>
+                <a href="" ng-click="viewAllImageEvent()" ng-class="{'selected':isMine==0}">所有图片</a>
+            </li>
+            <li>
+                <div class="ci-btn-upload-image">上传图片
+                    <input type="file" name="files[]" multiple accept="image/*">
+                </div>    
+            </li>
+            
+        </ul>
+        <div class="upload-wrap">
+            <form id="fileupload"  action="//jquery-file-upload.appspot.com/" method="POST" enctype="multipart/form-data"  file-upload="options" data-ng-class="{'fileupload-processing': processing() || loadingFiles}">
+            <p>
+                
+            </p>
+            </form>
+        </div>
+        
+    </div>
+    
+    <div class="ci-contents">
+        <div class="ci-gallary-ctrl m-form" ng-show="uploadList.length==0">
+            <button class="btn btn-default" ng-click="prevEvent()"><svg class="icon icon-rewind"><use xlink:href="#icon-rewind"></use></svg></button>
+            <span class="current-page">{{ pageno }}</span> / {{ totalPage }}
+            <button class="btn btn-default" ng-click="nextEvent()"><svg class="icon icon-fast-forward"><use xlink:href="#icon-fast-forward"></use></svg></button>
+            <input type="text" class="text text-pageno" placeholder="输入页数">
+            <button type="button" class="btn btn-primary" ng-click="goToPageEvent()">跳转</button>
+        </div>
+        <div class="ci-gallary-ctrl upload" ng-show="uploadList.length>0">
+            <div class="loading-bar-wrap">
+                <div class="loading-bar" ng-show="percent">
+                    <div class="anim" style="width:{{percent}}%"></div>
+                </div>
+                <span class="img-count">{{uploadList.length}}张图片</span>
+            </div>
+            <span class="contact-info">
+                关于<a href="http://www.vanthink.cn/?p=13" target="_blank">用户图片共享计划</a>
+            </span>
+            <button type="button" class="btn btn-primary" ng-click="uploadAllEvent()"><svg class="icon icon-cloud-upload"><use xlink:href="#icon-cloud-upload"></use></svg> 开始上传</button>
+            <button type="button" class="btn btn-info" ng-click="clearAllEvent()"><svg class="icon icon-trash"><use xlink:href="#icon-trash"></use></svg> 清空</button>
+        </div>
+        <div class="ci-gallary">
+            <div class="col-item" ng-repeat="item in list" ng-hide="uploadList.length>0">
+                <div class="ci-img" ng-click="selectItemEvent($index,$event)">
+                    <div class="img-wrap">
+                        <img src="{{ item.url }}" />    
+                    </div>
+                    <div class="name">{{ item.title }}</div>
+                    <div class="selete-item">
+                        <span class="circle-item"><svg class="icon icon-check"><use xlink:href="#icon-check"></use></svg></span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-item" data-ng-repeat="item in uploadList">
+                <div class="ci-img">
+                    <div class="img-wrap" >
+                        <!--span class="preview"><a data-ng-href="{{item.url}}" title="{{item.name}}" download="{{item.name}}" data-gallery><img data-ng-src="{{item.thumbnailUrl}}"/></span--> 
+                        <div class="preview" file-upload-preview="item"></div>
+                    </div>
+                    <div class="name">{{ item.name }}
+                        <button type="button" ng-click="item.$submit()"></button>
+                    </div>
+                    <div class="upload-status" file-upload-progress="item.$progress()">
+                        
+                        <span> 
+                            <svg width="38" height="38" viewBox="0 0 38 38" xmlns="http://www.w3.org/2000/svg" stroke="#2ecc71">
+                                <g fill="none" fill-rule="evenodd">
+                                    <g transform="translate(1 1)" stroke-width="2">
+                                        <circle stroke-opacity=".4" cx="18" cy="18" r="18"/>
+                                        <path d="M36 18c0-9.94-8.06-18-18-18">
+                                            <animateTransform
+                                                attributeName="transform"
+                                                type="rotate"
+                                                from="0 18 18"
+                                                to="360 18 18"
+                                                dur="1s"
+                                                repeatCount="indefinite"/>
+                                        </path>
+                                    </g>
+                                </g>
+                            </svg>
+                            <i class="percent"></i>
+                        </span>
+                    </div>
+                    <div class="selete-item">
+                        <span class="circle-item" ng-click="removeUploadItemEvent($index,$event)"><svg class="icon icon-cross"><use xlink:href="#icon-cross"></use></svg></span>
+                    </div>
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    <div class="ci-loader">
+        <div class="loader-wrap">
+            <div class="loader">
+                <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="40px" height="40px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+                <path fill="#2ecc71" d="M43.935,25.145c0-10.318-8.364-18.683-18.683-18.683c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615c8.072,0,14.615,6.543,14.615,14.615H43.935z" transform="rotate(39.9774 25 25)">
+                <animateTransform attributeType="xml" attributeName="transform" type="rotate" from="0 25 25" to="360 25 25" dur="0.6s" repeatCount="indefinite"></animateTransform>
+                </path>
+                </svg>
+            </div>
+            <div class="loader-info">加载中...</div>
+        </div>
+        
+    </div>
+    <div class="ci-drag-zone"></div>
+</div>

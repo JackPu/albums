@@ -14,6 +14,11 @@ export default class extends Base {
         this.assign("nav", data);
         return this.display();
     }
+    
+     async apiAction() {
+        let data = await this.model("nav").select();;
+        this.success(data)
+    }
 
     async apiAction() {
         let data = await this.model("nav").select();;

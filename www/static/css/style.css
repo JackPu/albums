@@ -26,6 +26,9 @@ a{
     position: relative;
     margin:0 1rem;
 }
+.black{
+    color:#777;
+}
 .header{
     position: relative;
     height: 26rem;
@@ -246,6 +249,8 @@ a{
         margin: 0;
     }
 }
+
+
 
 
 
