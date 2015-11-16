@@ -11,10 +11,10 @@ export default class extends think.model.mongo {
         }
     }
 
-    addNav() {
+    addNav(...args) {
         return this.add({
-            name: 'UI',
-            desc: 'UI'
+            username: 'UI',
+            userheader: 'UI'
         })
     }
 }

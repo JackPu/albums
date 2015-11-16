@@ -18,24 +18,15 @@
                     </div>
                 </div>
                 <div class="basic-num">
-                    <div class="item">
-                        <div class="num">
-                            12
+                    <%category.forEach(function(item){%>
+                         <div class="item">
+                            <div class="num">
+                                <%=item['num']%>
+                            </div>
+                            <%=item['name']%>
                         </div>
-                        Designs
-                    </div>
-                    <div class="item">
-                        <div class="num">
-                            12
-                        </div>
-                        Photography
-                    </div>
-                    <div class="item">
-                        <div class="num">
-                            12
-                        </div>
-                        Collections
-                    </div>
+                    <%})%>
+                   
                 </div>
 
             </div>
@@ -46,7 +37,7 @@
         <div class="container">
             <div class="tag-list">
                 <%nav.forEach(function(item){%>
-                    <a href="tag"><%=item%></a>
+                    <a href="tag"><%=item['name']%></a>
                 <%})%>
             </div>
             <div class="posts-list">

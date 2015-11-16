@@ -8,10 +8,6 @@ export default class extends Base {
      * @return {Promise} []
      */
     indexAction() {
-        //auto render template file index_index.html
-        let model = this.model("nav");
-        let data = model.select();
-        this.assign("nav", data);
         return this.display();
     }
     
@@ -20,13 +16,14 @@ export default class extends Base {
         this.success(data)
     }
 
-    async apiAction() {
-        let data = await this.model("nav").select();;
-        this.success(data)
-    }
 
     async addAction() {
         let id = await this.model('nav').addNav();
+        this.success(id)
+    }
+    
+    async addcategoryAction() {
+        let id = await this.model('category').addCat();
         this.success(id)
     }
 

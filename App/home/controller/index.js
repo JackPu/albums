@@ -29,10 +29,6 @@ var _default = (function (_Base) {
      */
 
     _default.prototype.indexAction = function indexAction() {
-        //auto render template file index_index.html
-        var model = this.model("nav");
-        var data = model.select();
-        this.assign("nav", data);
         return this.display();
     };
 
@@ -63,6 +59,26 @@ var _default = (function (_Base) {
                 case 0:
                     context$2$0.next = 2;
                     return _regeneratorRuntime.awrap(this.model('nav').addNav());
+
+                case 2:
+                    id = context$2$0.sent;
+
+                    this.success(id);
+
+                case 4:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
+    };
+
+    _default.prototype.addcategoryAction = function addcategoryAction() {
+        var id;
+        return _regeneratorRuntime.async(function addcategoryAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    context$2$0.next = 2;
+                    return _regeneratorRuntime.awrap(this.model('category').addCat());
 
                 case 2:
                     id = context$2$0.sent;

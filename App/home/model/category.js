@@ -1,7 +1,6 @@
 'use strict';
 /**
- * post model
- *
+ * category model
  */
 
 var _inherits = require('babel-runtime/helpers/inherits')['default'];
@@ -33,15 +32,11 @@ var _default = (function (_think$model$mongo) {
         };
     };
 
-    _default.prototype.addPost = function addPost() {
+    _default.prototype.addCat = function addCat() {
         return this.add({
-            title: 'UI',
-            contents: 'UI',
-            tags: ['ui'],
-            url: '',
-            nav: 1,
-            like: 0
-
+            name: 'Design',
+            num: 10012,
+            desc: 'Design'
         });
     };
 

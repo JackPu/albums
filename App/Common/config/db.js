@@ -7,7 +7,7 @@ exports.__esModule = true;
 exports['default'] = {
   type: 'mongo',
   // host: '127.0.0.1',
-  host: '52.26.145.56',
+  host: '127.0.0.1',
   port: '',
   name: '',
   user: '',
