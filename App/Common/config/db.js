@@ -8,7 +8,7 @@ exports['default'] = {
   type: 'mongo',
   // host: '127.0.0.1',
   host: '127.0.0.1',
-  port: '',
+  port: '27071',
   name: '',
   user: '',
   pwd: '',
