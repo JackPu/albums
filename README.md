@@ -68,3 +68,30 @@ This is My albums http://design.jackpu.com
 ### Thanks 
 
 Design by Carl Hauser https://dribbble.com/carlhauser
+
+### MIT License
+
+### modules
+
++ user 
+    + login 
+    + register
++ post 
+    + add 
+    + edit
+    + remove
+    + search
++ tags
+    + add 
+    + search
+    
++ cats 
+    + add 
+    + search post by cats
+
++ font-end 
+    + uplaod
+    + add qiniu
+    + bootstrap4
+
+
