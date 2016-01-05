@@ -7,7 +7,7 @@ export default {
   type: 'mongo',
  // host: '127.0.0.1',
   host: '127.0.0.1',
-  port: '',
+  port: '27017',
   name: '',
   user: '',
   pwd: '',
