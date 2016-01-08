@@ -4,19 +4,20 @@ var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var path = require('path'); 
 var sass = require('gulp-sass');
-
+var gutil = require('gulp-util');
 
 gulp.task('sass', function () {
-  return gulp.src('www/static/sass/*.style.sass')
+  return gulp.src('www/static/sass/*.style.scss')
         .pipe(plumber(function(error) {
             gutil.log(gutil.colors.red(error.message));
             gutil.beep();
             this.emit('end');
         }))
-       .pipe(less())
+        
+       .pipe(sass())
     
-   // .pipe(minifycss())
-    .pipe(gulp.dest('./public/css'));
+    .pipe(minifycss())
+    .pipe(gulp.dest('www/static/css'));
 });
 
 gulp.task('minifycss',function(){
@@ -36,8 +37,8 @@ gulp.task('uglifyjs',function(){
 });
 
 gulp.task('watch',function(){
-    gulp.watch('./public/less/**/*.less', function(){
-        gulp.run('less');
+    gulp.watch('www/static/sass/**/*.scss', function(){
+        gulp.run('sass');
     });
         //gulp.watch(path['css'],['minifycss']);
         //gulp.watch(path['js'],['uglifyjs']);
