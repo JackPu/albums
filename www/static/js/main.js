@@ -1,7 +1,7 @@
 var LIB_PATH = 'lib/';
 //var LIB_PATH = 'http://s1.vued.vanthink.cn/';
 var JS_PATH = 'static/js/';
-var ANGULAR_CTRL_PATH = 'static/js/controller/';
+var ANGULAR_CTRL_PATH = 'static/js/components/';
 var ANGULAR_DIR_PATH = 'static/js/directive/';
 var ANGULAR_SER_PATH = 'static/js/service/';
 

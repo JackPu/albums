@@ -1,17 +1,13 @@
 var gulp = require('gulp');
-//var minifycss = require('gulp-minify-css');
+var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
-var less = require('gulp-less');
 var path = require('path'); 
-//var gutil = require('gulp-util');
-var path2 = {
-    'css':['./public/css/**/*.css'],
-    'js':['./public/js/**/*.js','!./js/city.min.js','!./js/lib/jquery.validVal-customValidations.js']
-};
+var sass = require('gulp-sass');
 
-gulp.task('less', function () {
-  return gulp.src('./public/less/style.less')
+
+gulp.task('sass', function () {
+  return gulp.src('www/static/sass/*.style.sass')
         .pipe(plumber(function(error) {
             gutil.log(gutil.colors.red(error.message));
             gutil.beep();

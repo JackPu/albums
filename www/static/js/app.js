@@ -16,7 +16,7 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
     }))
     
     .when("/user/login", angularAMD.route({
-        templateUrl: 'user/login/view', controller: 'LoginCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'login.js'
+        templateUrl: 'user/login/view', controller: 'LoginCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/login.js'
     }))
     
     .when("/upload", angularAMD.route({
@@ -24,7 +24,7 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
     }))
     
     .otherwise({redirectTo: "/home"});
-     $locationProvider.html5Mode(true);   
+     //$locationProvider.html5Mode(true);   
   });
     
   
