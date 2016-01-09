@@ -8,7 +8,7 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
     .when("/home", angularAMD.route({
-        templateUrl: 'home/home/view', controller: 'HomeCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'home.js'
+        templateUrl: 'home/home/view', controller: 'HomeCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'home/home.js'
     }))
     
     .when("/upload", angularAMD.route({

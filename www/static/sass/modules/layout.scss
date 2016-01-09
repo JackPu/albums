@@ -1,11 +1,12 @@
 html,body{
     width: 100%;
     line-height: 1;
+    font-size: 62.5%;
 }
 body{
     background: #f9f9f9;
     font-size: 62.5%;
-    color: #fefefe;
+    color: $baseColor;
 }
 a{
     text-decoration: none;
