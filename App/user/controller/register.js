@@ -26,7 +26,7 @@ var _default = (function (_Base) {
    * @return {Promise} []
    */
 
-  _default.prototype.indexAction = function indexAction() {
+  _default.prototype.viewAction = function viewAction() {
     //auto render template file index_index.html
     return this.display();
   };
