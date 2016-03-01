@@ -28,6 +28,24 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
         templateUrl: 'user/register/view', controller: 'RegisterCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/register.js'
     }))
     
+    .when("/user/profile", angularAMD.route({
+        templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
+    }))
+    
+    
+    // admin 
+    .when("/admin/home", angularAMD.route({
+        templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
+    }))
+    
+     .when("/admin/photos", angularAMD.route({
+        templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
+    }))
+    
+    .when("/admin/settings", angularAMD.route({
+        templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
+    }))
+    
 
     
     .otherwise({redirectTo: "/home"});
