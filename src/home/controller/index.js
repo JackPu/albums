@@ -13,7 +13,7 @@ export default class extends Base {
     
      async apiAction() {
         let data = await this.model("nav").select();;
-        this.success(data)
+        this.success(data);
     }
 
 
@@ -23,6 +23,7 @@ export default class extends Base {
     }
     
     async addcategoryAction() {
+        
         let id = await this.model('category').addCat();
         this.success(id)
     }

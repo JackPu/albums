@@ -5,7 +5,7 @@ import Base from './base.js';
 
 var fs = require('fs');
 var path = require('path');
-//var moment = require('moment');
+var moment = require('moment');
 
 export default class extends Base {
     /**
@@ -33,14 +33,22 @@ export default class extends Base {
         think.mkdir(uploadPath);
         var basename = path.basename(filepath);
         var self = this;
-        var newFilename = moment().format('YYYYMMDDHHmmsSSS') + '.' + ext;
+        var newFilename = Math.random().toString(36).substring(7) + moment().format('YYYYMMDDHHmmsSSS') + '.' + ext;
         fs.rename(filepath, uploadPath + '/' + newFilename,function() {
             file.path = uploadPath + newFilename;
             self.assign('fileInfo', file);
             self.success(file);   
         });
+        
+        
 
         
+    }
+    
+    async addAction() {
+       // let model = this.model('post');
+        let id = await this.model('post').addPost();
+        return this.success(id);
     }
     
 

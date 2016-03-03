@@ -12,12 +12,12 @@ export default class extends think.model.mongo {
         }
     }
 
-    addPost() {
+    addPost(...args) {
         return this.add({
             title: 'UI',
             contents: 'UI',
             tags:['ui'],
-            url: '',
+            url: 'http://ww2.sinaimg.cn/mw690/69db6071jw1f1d4tmufkoj212w0m80tr.jpg',
             nav: 1,
             like: 0
             
