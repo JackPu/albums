@@ -16,9 +16,8 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
     }))
     
     .when("/upload", angularAMD.route({
-        templateUrl: 'home/upload/view', controller: 'uploadCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'upload.js'
+        templateUrl: 'home/upload/view', controller: 'HomeUploadCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'home/upload.js'
     }))
-    
     
     .when("/user/login", angularAMD.route({
         templateUrl: 'user/login/view', controller: 'LoginCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/login.js'

@@ -5,7 +5,7 @@ import Base from './base.js';
 
 var fs = require('fs');
 var path = require('path');
-var moment = require('moment');
+//var moment = require('moment');
 
 export default class extends Base {
     /**
@@ -14,9 +14,7 @@ export default class extends Base {
      */
     viewAction() {
         //auto render template file index_index.html
-        let model = this.model("nav");
-        let data = model.select();
-        this.assign("nav", data);
+       
         return this.display();
     }
     

@@ -14,7 +14,7 @@ var _baseJs2 = _interopRequireDefault(_baseJs);
 
 var fs = require('fs');
 var path = require('path');
-var moment = require('moment');
+//var moment = require('moment');
 
 var _default = (function (_Base) {
     _inherits(_default, _Base);
@@ -32,9 +32,7 @@ var _default = (function (_Base) {
 
     _default.prototype.viewAction = function viewAction() {
         //auto render template file index_index.html
-        var model = this.model("nav");
-        var data = model.select();
-        this.assign("nav", data);
+
         return this.display();
     };
 
