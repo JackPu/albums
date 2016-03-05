@@ -3,11 +3,11 @@ var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var path = require('path'); 
-var sass = require('gulp-sass');
+var sass = require('gulp-less');
 var gutil = require('gulp-util');
 
-gulp.task('sass', function () {
-  return gulp.src('www/static/sass/*.style.scss')
+gulp.task('less', function () {
+  return gulp.src('www/static/less/*.style.less')
         .pipe(plumber(function(error) {
             gutil.log(gutil.colors.red(error.message));
             gutil.beep();
@@ -16,7 +16,7 @@ gulp.task('sass', function () {
         
        .pipe(sass())
     
-    .pipe(minifycss())
+    //.pipe(minifycss())
     .pipe(gulp.dest('www/static/css'));
 });
 
@@ -37,8 +37,8 @@ gulp.task('uglifyjs',function(){
 });
 
 gulp.task('watch',function(){
-    gulp.watch('www/static/sass/**/*.scss', function(){
-        gulp.run('sass');
+    gulp.watch('www/static/less/**/*.less', function(){
+        gulp.run('less');
     });
         //gulp.watch(path['css'],['minifycss']);
         //gulp.watch(path['js'],['uglifyjs']);

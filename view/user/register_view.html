@@ -1,23 +1,25 @@
 <div class="componets c-user-login c-user-register">
-    <div class="wrap">
+    <div class="login-box">
         <div class="logo"></div>
         <p class="logo-desc">Welcome to J-albums</p>
-        <form class="m-form">
+        <form class="m-form login-form">
+            <input type="tel" name="username" style="display:none;"/>
+            <input type="password" name="username" style="display:none;"/>
             <div class="form-group">
-                <input type="text" class="form-control" placeholder="E-mail" />
+                <input type="text" name="mail" ng-model="user.mail" class="form-control" autofocus placeholder="E-mail" />
             </div>
             <div class="form-group">
-                <input type="pasword" class="form-control" placeholder="Password" />
+                <input type="pasword" name="pass1" ng-model="user.pass1" class="form-control" placeholder="Password" />
             </div>
             <div class="form-group">
-                <input type="pasword" class="form-control" placeholder="Retry Password" />
-            </div>
-            <div class="form-group">
-                <button type="button" class="btn btn-primary form-control">Sign In</button>
-            </div>
-            <div class="form-group text-right">
-                Have an Account? <a href="#user/login">Sign In</a>
+                <input type="pasword" name="pass2" ng-model="user.pass2" class="form-control" placeholder="Retry Password" />
             </div>
         </form>
+         <div class="form-group" style="margin-top:20px;">
+            <button type="button" ng-click="save()" class="btn btn-primary form-control login-btn">Sign In</button>
+        </div>
+        <div class="form-group text-right">
+            Have an Account? <a href="#user/login">Sign In</a>
+        </div>
     </div>
 </div>

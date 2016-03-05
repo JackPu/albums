@@ -1,0 +1,96 @@
+.posts-list img{
+    width: 100%;
+    min-height: 100%;
+    height: auto;
+    position: absolute;  
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;  
+    left: 0;  
+    right: 0;  
+}
+.posts-list .post-item{
+    overflow: hidden;
+    float: left; 
+    position: relative;
+    margin-bottom: 1rem;
+    padding-top: 100%;
+}
+.posts-list .post-item .like-num-wrap{
+    position: absolute;
+    top:0;
+    left:0;
+    right: 0;
+    padding: 1rem 1rem; 
+    text-align: right;
+    box-shadow: 2px 0 5px 7px rgba(0,0,0,.1) inset;
+    font-size: 1.25rem;
+}
+.posts-list .post-item .like-num-wrap .num{
+    margin-left: .75rem;
+    font-weight: bold;
+}
+.posts-list .details{
+    display: none;
+    position: absolute;
+    left:0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    padding: 1.25rem 1rem;
+    background: #4099ff;
+    color:#ddd;
+}
+.posts-list .details .title{
+    font-size: 1.2rem;
+    color:#fff;
+}
+
+.post-single{
+    position: relative;
+    padding-top: 1rem;
+}
+.post-single img{
+    max-width: 100%;
+    margin-bottom: .75rem;
+}
+
+.post-single .title{
+    font-size: 1.5rem;
+    color:#222;
+}
+.post-single .date-info{
+	 padding: .5rem 0;
+     font-size: 1rem;
+     color:#999;
+}
+.post-single .date-info .icon-heart{
+    margin-left: 1rem;
+    margin-right: .5rem;
+} 
+.post-single .desc{
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color:#555;
+}
+@media all and (min-width:1120px){
+    .post-item {
+	   width: 22.5%;
+       margin:1.25%;
+       padding-top: 22.5% !important;
+    }
+}
+
+@media all and (max-width:764px){
+    .post-item {
+	   width: 45%;
+       margin:2.5%;
+    }
+}
+
+@media all and (max-width:480px){
+    .post-item {
+	   width: 100%;
+        margin: 0;
+    }
+}

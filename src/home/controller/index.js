@@ -23,7 +23,6 @@ export default class extends Base {
     }
     
     async addcategoryAction() {
-        
         let id = await this.model('category').addCat();
         this.success(id)
     }
