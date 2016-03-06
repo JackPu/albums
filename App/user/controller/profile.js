@@ -29,8 +29,24 @@ var _default = (function (_Base) {
      */
 
     _default.prototype.viewAction = function viewAction() {
-        //auto render template file index_index.html
-        return this.display();
+        var user;
+        return _regeneratorRuntime.async(function viewAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    context$2$0.next = 2;
+                    return _regeneratorRuntime.awrap(this.model('user').select());
+
+                case 2:
+                    user = context$2$0.sent;
+
+                    this.assign("user", user[0]);
+                    return context$2$0.abrupt('return', this.display());
+
+                case 5:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
     };
 
     _default.prototype.searchAction = function searchAction() {
@@ -44,7 +60,7 @@ var _default = (function (_Base) {
                 case 2:
                     user = context$2$0.sent;
 
-                    this.success(user);
+                    this.success(user[0]);
 
                 case 4:
                 case 'end':

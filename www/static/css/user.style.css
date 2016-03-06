@@ -8064,3 +8064,10 @@ body {
   margin: 0 auto;
   padding: 1.2rem;
 }
+.c-user-profile .cover {
+  height: 18rem;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  filter: blur(5px);
+  -webkit-filter: blur(5px);
+}

@@ -7,14 +7,17 @@ export default class extends Base {
      * index action
      * @return {Promise} []
      */
-    viewAction() {
-        //auto render template file index_index.html
+    async viewAction() {
+        
+        let user = await this.model('user').select();
+        
+        this.assign("user", user[0]);
         return this.display();
     }
     
     async searchAction() {
         let user = await this.model('user').select();
-        this.success(user);
+        this.success(user[0]);
     }
 
 
