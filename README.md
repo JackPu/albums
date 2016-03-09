@@ -80,8 +80,9 @@ Design by Carl Hauser https://dribbble.com/carlhauser
 ### modules
 
 + user 
-    + login 
-    + register
+    + login ok
+    + register ok
+    + profile 
 + post 
     + add 
     + edit
