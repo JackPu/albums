@@ -8117,7 +8117,19 @@ body {
   padding: .5rem 0;
   min-height: 200px;
 }
-.c-user-profile .contents .edit-navigation {
+.c-user-profile .contents .edit-navigation,
+.c-user-profile .contents .m-form {
   max-width: 480px;
   margin: 0 auto;
+}
+.c-user-edit {
+  padding-bottom: 40px;
+}
+.c-user-edit .m-form {
+  max-width: 480px;
+  margin: 0 auto;
+  font-size: .7rem;
+}
+.c-user-edit .m-form .input-group {
+  margin-bottom: .25rem;
 }
