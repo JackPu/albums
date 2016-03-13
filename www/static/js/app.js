@@ -31,6 +31,15 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
         templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
     }))
     
+    .when("/user/edit", angularAMD.route({
+        templateUrl: 'user/edit/view', controller: 'EditCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/edit.js'
+    }))
+    
+    
+    .when("/user/profile/edit", angularAMD.route({
+        templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
+    }))
+    
     
     
     
