@@ -32,6 +32,8 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
     }))
     
     
+    
+    
     // admin 
     .when("/admin/home", angularAMD.route({
         templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
