@@ -1,43 +1,37 @@
-<div class="components" ng-init="init()">
-    <div class="header">
-        <div class="container">
-            <header class="top-nav">
-                <a href="/" class="icon-menu home"></a>
-                <span class="username">Jack Pu </span>
-                <img class="avantar" src="/static/img/my-photos.jpg" />
-            </header>
-        </div>
-    </div>
-
+<div class="components c-upload" ng-init="init()">
+    <div class="hd"></div>
     <div class="main">
         <div class="container black">
             <div class="m-form">
                 <h3>创建图片      
-                    <a href=""> 使用网络地址</a>
+                
                 </h3>
                 <div class="btn-upload-image">
-                    上传图片
+                </div>
+                <div class="preview-image">
+                    <img ng-src="{{formData.url}}" />
                 </div>
                 <div class="form-group">
-                    <label>title:</label>
-                    <input type="text" class="form-element" placeholder="" />
+                    <input type="text" class="form-control" placeholder="title" />
                 </div>
 
                 <div class="form-group">
-                    <label>desc:</label>
-                    <textarea class="textarea">
-
-                    </textarea>
+                    <textarea ng-model="form.contents" placeholder="your Description 140" class="textarea form-control" style="height:180px;"></textarea>
                 </div>
                 <div class="form-group">
-                    <label>tag:</label>
-                    <input type="text" class="form-element" placeholder="" />
+                    <select class="form-control" ng-model="form.nav">
+                        <option value="">select categogry</option>
+                        <%category.forEach(function(item){%>
+                             <option value="<%=item['name']%>"><%=item['name']%></option> 
+                        <%})%>
+                    </select>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" ng-click="save($event)"  class="btn btn-primary">Create One</button>
                 </div>
 
 
             </div>
-
-
 
         </div>
 

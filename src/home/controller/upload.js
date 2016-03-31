@@ -14,7 +14,9 @@ export default class extends Base {
      */
     viewAction() {
         //auto render template file index_index.html
-       
+        let categoryData = this.model('category').select();
+        this.assign("category", categoryData);
+        
         return this.display();
     }
     
@@ -29,14 +31,15 @@ export default class extends Base {
         }
         var ext = filename.split('.')[1];
         //文件上传后，需要将文件移动到项目其他地方，否则会在请求结束时删除掉该文件
-        var uploadPath = think.RESOURCE_PATH + '/upload';
+        var uploadPath = think.UPLOAD_PATH ;
         think.mkdir(uploadPath);
         var basename = path.basename(filepath);
         var self = this;
         var newFilename = Math.random().toString(36).substring(7) + moment().format('YYYYMMDDHHmmsSSS') + '.' + ext;
         fs.rename(filepath, uploadPath + '/' + newFilename,function() {
             file.path = uploadPath + newFilename;
-            self.assign('fileInfo', file);
+            file.url = '/static/upload/' + newFilename;
+
             self.success(file);   
         });
         
@@ -46,9 +49,10 @@ export default class extends Base {
     }
     
     async addAction() {
+        let data = this.post();
        // let model = this.model('post');
-        let id = await this.model('post').addPost();
-        return this.success(id);
+       // let id = await this.model('post').addPost();
+        return this.success(data);
     }
     
 

@@ -1,6 +1,6 @@
 // upload.js
 
-define(['app','swipebox','core.upload'], function (app) {
+define(['app','swipebox','core.image.upload'], function (app) {
     'use strict';
     
     app.controller('HomeUploadCtrl',['$scope',  function ($scope) {
@@ -11,16 +11,31 @@ define(['app','swipebox','core.upload'], function (app) {
             $scope.bind();
         };
         
+        $scope.save = function(e) {
+            e.preventDefault();
+            App.send('/home/upload/add',{
+                type:'post',
+                data:$scope.formData,
+                success: function(result) {
+                    if(result.errcode == 0) {
+                    
+                    }else{
+                        return App.sendMessage(result.errstr);
+                    }
+                }
+            });    
+        };
+        
         $scope.bind = function() {
-            $(".btn-upload-image").CoreUpload({
+            $(".btn-upload-image").coreImageUpload({
                 extensions: ['jpg', 'jpeg', 'png','gif'],
-                actionToSubmitUpload: "/home/upload/model",
+                url: "/home/upload/model",
+                inputOfFile:'file',
                 enableDrag: false,
                 uploadedCallback: function (result) {
                     $scope.$apply(function(){
-                        $scope.image = {
-                            name:result.data.name,
-                            src: result.data.src
+                        $scope.formData = {
+                            url: result.data.url
                         };
                     });
                 }

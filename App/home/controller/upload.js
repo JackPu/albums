@@ -34,6 +34,8 @@ var _default = (function (_Base) {
 
     _default.prototype.viewAction = function viewAction() {
         //auto render template file index_index.html
+        var categoryData = this.model('category').select();
+        this.assign("category", categoryData);
 
         return this.display();
     };
@@ -49,31 +51,28 @@ var _default = (function (_Base) {
         }
         var ext = filename.split('.')[1];
         //文件上传后，需要将文件移动到项目其他地方，否则会在请求结束时删除掉该文件
-        var uploadPath = think.RESOURCE_PATH + '/upload';
+        var uploadPath = think.UPLOAD_PATH;
         think.mkdir(uploadPath);
         var basename = path.basename(filepath);
         var self = this;
         var newFilename = Math.random().toString(36).substring(7) + moment().format('YYYYMMDDHHmmsSSS') + '.' + ext;
         fs.rename(filepath, uploadPath + '/' + newFilename, function () {
             file.path = uploadPath + newFilename;
-            self.assign('fileInfo', file);
+            file.url = '/static/upload/' + newFilename;
+
             self.success(file);
         });
     };
 
     _default.prototype.addAction = function addAction() {
-        var id;
+        var data;
         return _regeneratorRuntime.async(function addAction$(context$2$0) {
             while (1) switch (context$2$0.prev = context$2$0.next) {
                 case 0:
-                    context$2$0.next = 2;
-                    return _regeneratorRuntime.awrap(this.model('post').addPost());
+                    data = this.post();
+                    return context$2$0.abrupt('return', this.success(data));
 
                 case 2:
-                    id = context$2$0.sent;
-                    return context$2$0.abrupt('return', this.success(id));
-
-                case 4:
                 case 'end':
                     return context$2$0.stop();
             }
@@ -87,3 +86,4 @@ exports['default'] = _default;
 module.exports = exports['default'];
 
 // let model = this.model('post');
+// let id = await this.model('post').addPost();
