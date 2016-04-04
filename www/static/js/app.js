@@ -12,7 +12,9 @@ define(['angularAMD', 'angular-route','directive/pagination'], function (angular
     }))
     
     .when("/detail/:id", angularAMD.route({
-        templateUrl: 'home/detail/view', controller: 'DetailCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'home/detail.js'
+        templateUrl: function(params){ return '/home/detail/view?uid=' + params.id;}, 
+        controller: 'DetailCtrl', 
+        controllerUrl: ANGULAR_CTRL_PATH + 'home/detail.js'
     }))
     
     .when("/upload", angularAMD.route({

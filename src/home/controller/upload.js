@@ -50,8 +50,8 @@ export default class extends Base {
     
     async addAction() {
         let data = this.post();
-       // let model = this.model('post');
-       // let id = await this.model('post').addPost();
+        let model = this.model('post');
+        let id = await this.model('post').addPost(data);
         return this.success(data);
     }
     

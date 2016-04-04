@@ -33,15 +33,17 @@ var _default = (function (_think$model$mongo) {
         };
     };
 
-    _default.prototype.addPost = function addPost() {
-        return this.add({
-            title: 'UI',
-            contents: 'UI',
-            tags: ['ui'],
-            url: 'http://ww2.sinaimg.cn/mw690/69db6071jw1f1d4tmufkoj212w0m80tr.jpg',
-            nav: 1,
-            like: 0
+    _default.prototype.queryOne = function queryOne(id) {
+        return this.select({ '_id': id });
+    };
 
+    _default.prototype.addPost = function addPost(args) {
+        return this.add({
+            title: args['title'],
+            contents: args['contents'],
+            tags: args['tags'],
+            url: args['url'],
+            nav: args['nav']
         });
     };
 

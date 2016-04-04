@@ -11,6 +11,13 @@ define(['app','swipebox','core.image.upload'], function (app) {
             $scope.bind();
         };
         
+        $scope.getNavId = function(e) {
+            console.log(e);
+            var val = e.target.dataset['id'];
+            console.log(val);
+            $scope.formData.nav_id = val;
+        }
+        
         $scope.save = function(e) {
             e.preventDefault();
             App.send('/home/upload/add',{
@@ -25,6 +32,8 @@ define(['app','swipebox','core.image.upload'], function (app) {
                 }
             });    
         };
+        
+        
         
         $scope.bind = function() {
             $(".btn-upload-image").coreImageUpload({

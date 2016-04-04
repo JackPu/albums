@@ -4,6 +4,8 @@ var _inherits = require('babel-runtime/helpers/inherits')['default'];
 
 var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
 
+var _regeneratorRuntime = require('babel-runtime/regenerator')['default'];
+
 var _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];
 
 exports.__esModule = true;
@@ -34,6 +36,26 @@ var _default = (function (_Base) {
         this.assign("nav", data);
         this.assign("category", categoryData);
         return this.display();
+    };
+
+    _default.prototype.modelAction = function modelAction() {
+        var data;
+        return _regeneratorRuntime.async(function modelAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    context$2$0.next = 2;
+                    return _regeneratorRuntime.awrap(this.model("post").select());
+
+                case 2:
+                    data = context$2$0.sent;
+                    ;
+                    this.success(data);
+
+                case 5:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
     };
 
     return _default;

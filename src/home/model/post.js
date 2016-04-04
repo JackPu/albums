@@ -11,16 +11,19 @@ export default class extends think.model.mongo {
             id: 1,
         }
     }
+    
+    
+    queryOne(id) {
+        return this.select({'_id':id});   
+    }
 
-    addPost(...args) {
+    addPost(args) {
         return this.add({
-            title: 'UI',
-            contents: 'UI',
-            tags:['ui'],
-            url: 'http://ww2.sinaimg.cn/mw690/69db6071jw1f1d4tmufkoj212w0m80tr.jpg',
-            nav: 1,
-            like: 0
-            
+            title: args['title'],
+            contents: args['contents'],
+            tags:args['tags'],
+            url: args['url'],
+            nav: args['nav']
         })
     }
     

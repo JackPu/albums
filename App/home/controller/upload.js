@@ -65,14 +65,20 @@ var _default = (function (_Base) {
     };
 
     _default.prototype.addAction = function addAction() {
-        var data;
+        var data, model, id;
         return _regeneratorRuntime.async(function addAction$(context$2$0) {
             while (1) switch (context$2$0.prev = context$2$0.next) {
                 case 0:
                     data = this.post();
+                    model = this.model('post');
+                    context$2$0.next = 4;
+                    return _regeneratorRuntime.awrap(this.model('post').addPost(data));
+
+                case 4:
+                    id = context$2$0.sent;
                     return context$2$0.abrupt('return', this.success(data));
 
-                case 2:
+                case 6:
                 case 'end':
                     return context$2$0.stop();
             }
@@ -84,6 +90,3 @@ var _default = (function (_Base) {
 
 exports['default'] = _default;
 module.exports = exports['default'];
-
-// let model = this.model('post');
-// let id = await this.model('post').addPost();

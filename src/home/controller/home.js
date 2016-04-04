@@ -17,6 +17,11 @@ export default class extends Base {
         return this.display();
     }
     
+    async modelAction() {
+        let data = await this.model("post").select();;
+        this.success(data);
+    }
+    
 
 
 }

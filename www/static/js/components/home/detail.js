@@ -1,6 +1,6 @@
 // detail.js
 define(['app'], function (app) {  
-    app.controller('DetailCtrl',['$scpe','$routeParams', function ($scope,$routeParams) {
+    app.controller('DetailCtrl',['$scope','$routeParams', function ($scope,$routeParams) {
         
         
     
