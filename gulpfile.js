@@ -3,7 +3,7 @@ var minifycss = require('gulp-minify-css');
 var uglify = require('gulp-uglify');
 var plumber = require('gulp-plumber');
 var path = require('path'); 
-var sass = require('gulp-less');
+var less = require('gulp-less');
 var gutil = require('gulp-util');
 
 gulp.task('less', function () {
@@ -14,9 +14,9 @@ gulp.task('less', function () {
             this.emit('end');
         }))
         
-       .pipe(sass())
+       .pipe(less())
     
-    //.pipe(minifycss())
+    .pipe(minifycss())
     .pipe(gulp.dest('www/static/css'));
 });
 

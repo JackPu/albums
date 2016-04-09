@@ -11,7 +11,7 @@ require.config({
     paths: {
         'jquery': 'http://s1.vued.vanthink.cn/d59f937c159f/jquery-2.2.1.min',
         'base': 'base',
-        'angular': 'http://s1.vued.vanthink.cn/angular.min',
+        'angular': 'http://s1.vued.vanthink.cn/f1906f08fcd2/angular.1.3.2.min',
         'angular-route': 'http://s1.vued.vanthink.cn/angular-route',
         'angularAMD': 'http://s1.vued.vanthink.cn/angularAMD.min',
         'ui.bootstrap': 'http://s1.vued.vanthink.cn/f56c808c0d0d/angular.ui.bootstrap.min',
@@ -29,34 +29,8 @@ require.config({
         'base':{
             "exports": 'Base'
         },
-        'jquery.knob':['jquery'],
-        'jquery.ui':['jquery'],
-        'jquery.ui.widget':['jquery','jquery.ui'],
-        'jquery.mousewheel':['jquery'],
-        'core.upload':['jquery'],
-        'jquery.iframe-transport':{
-            "exports": 'jquery_iframe-transport'
-        },
-        'canvas-to-blob':{
-            "exports": 'canvas-to-blob'
-        },
-        'jquery-file-upload-image-all': ['jquery.ui.widget'],
-        
-        'core.crop':{
-            'exports': 'coreCrop'
-        },
-        'swipebox': ['jquery'],
-        
-        
-        'validator':{
-            "exports": 'validator'
-        },
-        'bootstrap':{
-            "exports": 'bootstrap'
-        },
-        'scroll': {
-            "exports": 'scroll'
-        },
+        'ui.bootstrap':['angular'],
+        'ng-progress':['angular'],
         
     },
     deps: ['app']
