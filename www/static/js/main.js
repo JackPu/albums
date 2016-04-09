@@ -7,13 +7,13 @@ var ANGULAR_SER_PATH = 'static/js/service/';
 
 require.config({
     baseUrl: "static/js",
-    urlArgs: App.debug != true? 'bust=' + App.version : 'bust=' + (new Date()).getTime() + Math.random() * 10000,
+   // urlArgs: App.debug != true? 'bust=' + App.version : 'bust=' + (new Date()).getTime() + Math.random() * 10000,
     paths: {
-        'jquery': LIB_PATH + 'jquery-1.7.2.min',
+        'jquery': 'http://s1.vued.vanthink.cn/d59f937c159f/jquery-2.2.1.min',
         'base': 'base',
-        'angular': LIB_PATH + 'angular.min',
-        'angular-route': LIB_PATH + 'angular-route',
-        'angularAMD': LIB_PATH + 'angularAMD.min',
+        'angular': 'http://s1.vued.vanthink.cn/angular.min',
+        'angular-route': 'http://s1.vued.vanthink.cn/angular-route',
+        'angularAMD': 'http://s1.vued.vanthink.cn/angularAMD.min',
         'ui.bootstrap': 'http://s1.vued.vanthink.cn/f56c808c0d0d/angular.ui.bootstrap.min',
         'validator': LIB_PATH + 'validator.min',
         'core.image.upload': LIB_PATH + 'jquery.core.image.upload.min',
