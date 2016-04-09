@@ -1,6 +1,6 @@
 // upload.js
 
-define(['app','swipebox','core.image.upload'], function (app) {
+define(['app','core.image.upload'], function (app) {
     'use strict';
     
     app.controller('HomeUploadCtrl',['$scope',  function ($scope) {

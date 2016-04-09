@@ -7826,9 +7826,10 @@ button.close {
   position: relative;
   height: 27rem;
   background-color: #3498db;
-  background-image: url(http://img1.vued.vanthink.cn/vued09bdc8ffb966d304ff651d5b2add3ffc.jpg);
+  background-image: url(../img/new-bg.jpg);
   background-repeat: no-repeat;
   background-position: center bottom;
+  background-size: 100% auto;
   color: #f1f1f1;
 }
 .m-cover .over-layout {
@@ -7837,7 +7838,7 @@ button.close {
   right: 0;
   left: 0;
   height: 100%;
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.35);
 }
 .m-cover .profile {
   position: relative;

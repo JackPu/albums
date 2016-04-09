@@ -1,9 +1,9 @@
 // 入口文件
-define(['angularAMD', 'angular-route','directive/pagination','ui.bootstrap'], function (angularAMD) {
+define(['angularAMD', 'angular-route','directive/pagination','ui.bootstrap','ng-progress'], function (angularAMD) {
   
 
     
-  var app = angular.module("webapp", ['ngRoute','Vued.directives.pagination','ui.bootstrap']);
+  var app = angular.module("webapp", ['ngRoute','Vued.directives.pagination','ui.bootstrap','ngProgress']);
   
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
@@ -67,7 +67,19 @@ define(['angularAMD', 'angular-route','directive/pagination','ui.bootstrap'], fu
   
     
     
-  // angular directive
+   app.run(function($rootScope, ngProgressFactory) {
+
+        var ngProgress = ngProgressFactory.createInstance();
+
+        $rootScope.$on('$routeChangeStart', function() {
+            ngProgress.start();
+        });
+
+        $rootScope.$on('$routeChangeSuccess', function() {
+            ngProgress.complete();
+        });
+        // Do the same with $routeChangeError
+    });
     
 
     

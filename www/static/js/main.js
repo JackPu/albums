@@ -14,15 +14,10 @@ require.config({
         'angular': LIB_PATH + 'angular.min',
         'angular-route': LIB_PATH + 'angular-route',
         'angularAMD': LIB_PATH + 'angularAMD.min',
-        'jquery.mousewheel': LIB_PATH + 'jquery.mousewheel.min',
-        'jquery.knob': LIB_PATH + 'jquery.knob',
         'ui.bootstrap': 'http://s1.vued.vanthink.cn/f56c808c0d0d/angular.ui.bootstrap.min',
         'validator': LIB_PATH + 'validator.min',
-        'swipebox':  LIB_PATH + 'jquery.swipebox.min',
         'core.image.upload': LIB_PATH + 'jquery.core.image.upload.min',
-        'core.upload':'lib/core.upload',
-        'core.crop': 'lib/core.crop',
-        'scroll': JS_PATH + 'lib/scroll',
+        'ng-progress': 'http://s1.vued.vanthink.cn/ngprogress.min',
         
     //end lib 
         'base': JS_PATH + 'base',

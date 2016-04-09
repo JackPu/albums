@@ -2,9 +2,10 @@
     position: relative;
     height: 27rem;
     background-color: @peter-river;
-    background-image: url(http://img1.vued.vanthink.cn/vued09bdc8ffb966d304ff651d5b2add3ffc.jpg);
+    background-image: url(../img/new-bg.jpg);
     background-repeat: no-repeat;
     background-position: center bottom;
+    background-size: 100% auto;
     color:#f1f1f1;
     .over-layout {
         position: absolute;
@@ -12,7 +13,12 @@
         right: 0;
         left: 0;
         height: 100%;
-        background: rgba(0, 0, 0, .45);
+        
+
+        background: #24C6DC; /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #24C6DC , #514A9D); /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to left, #24C6DC , #514A9D); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+        
     }
     .profile {
         position: relative;
