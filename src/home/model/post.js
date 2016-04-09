@@ -14,7 +14,7 @@ export default class extends think.model.mongo {
     
     
     queryOne(id) {
-        return this.select({'_id':id});   
+        return this.where({'_id':id}).select();   
     }
 
     addPost(args) {
@@ -23,7 +23,8 @@ export default class extends think.model.mongo {
             contents: args['contents'],
             tags:args['tags'],
             url: args['url'],
-            nav: args['nav']
+            nav: args['nav'],
+            date: args['date'],
         })
     }
     

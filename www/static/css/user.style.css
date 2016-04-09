@@ -7836,7 +7836,6 @@ body {
 }
 .components .main {
   margin: 0 auto;
-  max-width: 720px;
 }
 .m-cover {
   position: relative;
@@ -7962,6 +7961,7 @@ body {
 .post-single {
   position: relative;
   padding-top: 1rem;
+  padding-bottom: 3rem;
 }
 .post-single img {
   max-width: 100%;
@@ -7969,7 +7969,7 @@ body {
 }
 .post-single .title {
   font-size: 1.5rem;
-  color: #222;
+  color: #3498db;
 }
 .post-single .date-info {
   padding: .5rem 0;
@@ -7983,7 +7983,7 @@ body {
 .post-single .desc {
   font-size: 1.2rem;
   line-height: 2rem;
-  color: #555;
+  color: #777;
 }
 @media all and (min-width: 1120px) {
   .post-item {
@@ -8109,6 +8109,9 @@ body {
 .c-home .btn-manage {
   background: #535353;
   right: 4rem;
+}
+.c-detail img {
+  max-width: 100%;
 }
 .c-upload .btn-upload-image {
   margin: 20px;

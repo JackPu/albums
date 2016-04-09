@@ -65,26 +65,29 @@ var _default = (function (_Base) {
     };
 
     _default.prototype.addAction = function addAction() {
-        var data, model, id, catId, cat;
+        var data, model, dateTime, id, catId, cat;
         return _regeneratorRuntime.async(function addAction$(context$2$0) {
             while (1) switch (context$2$0.prev = context$2$0.next) {
                 case 0:
                     data = this.post();
                     model = this.model('post');
-                    context$2$0.next = 4;
+                    dateTime = moment().format('YYYY-MM-DD HH:mm:ss');
+
+                    data['date'] = dateTime;
+                    context$2$0.next = 6;
                     return _regeneratorRuntime.awrap(this.model('post').addPost(data));
 
-                case 4:
+                case 6:
                     id = context$2$0.sent;
                     catId = this.post('nav');
-                    context$2$0.next = 8;
+                    context$2$0.next = 10;
                     return _regeneratorRuntime.awrap(this.model('category').updateNum(catId));
 
-                case 8:
+                case 10:
                     cat = context$2$0.sent;
                     return context$2$0.abrupt('return', this.success(id));
 
-                case 10:
+                case 12:
                 case 'end':
                     return context$2$0.stop();
             }

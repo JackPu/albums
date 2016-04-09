@@ -51,6 +51,8 @@ export default class extends Base {
     async addAction() {
         let data = this.post();
         let model = this.model('post');
+        let dateTime = moment().format('YYYY-MM-DD HH:mm:ss');
+        data['date'] = dateTime;
         let id = await this.model('post').addPost(data);
         let catId = this.post('nav');
         let cat = await this.model('category').updateNum(catId);

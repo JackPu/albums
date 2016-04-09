@@ -12,7 +12,7 @@ define(['angularAMD', 'angular-route','directive/pagination','ui.bootstrap'], fu
     }))
     
     .when("/detail/:id", angularAMD.route({
-        templateUrl: function(params){ return '/home/detail/view?uid=' + params.id;}, 
+        templateUrl: function(params){ return '/home/detail/view?id=' + params.id;}, 
         controller: 'DetailCtrl', 
         controllerUrl: ANGULAR_CTRL_PATH + 'home/detail.js'
     }))

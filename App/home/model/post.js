@@ -34,7 +34,7 @@ var _default = (function (_think$model$mongo) {
     };
 
     _default.prototype.queryOne = function queryOne(id) {
-        return this.select({ '_id': id });
+        return this.where({ '_id': id }).select();
     };
 
     _default.prototype.addPost = function addPost(args) {
@@ -43,7 +43,8 @@ var _default = (function (_think$model$mongo) {
             contents: args['contents'],
             tags: args['tags'],
             url: args['url'],
-            nav: args['nav']
+            nav: args['nav'],
+            date: args['date']
         });
     };
 
