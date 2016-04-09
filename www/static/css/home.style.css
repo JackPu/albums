@@ -7838,7 +7838,12 @@ button.close {
   right: 0;
   left: 0;
   height: 100%;
-  background: rgba(0, 0, 0, 0.35);
+  background: #24C6DC;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #24C6DC, #514A9D);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #24C6DC, #514A9D);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 .m-cover .profile {
   position: relative;
@@ -7943,6 +7948,7 @@ button.close {
 .posts-list .details .title {
   font-size: 1.2rem;
   color: #fff;
+  line-height: 1.7;
 }
 .post-single {
   position: relative;
@@ -7954,8 +7960,10 @@ button.close {
   margin-bottom: .75rem;
 }
 .post-single .title {
-  font-size: 1.5rem;
-  color: #3498db;
+  font-size: 1.6rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+  color: #111;
 }
 .post-single .date-info {
   padding: .5rem 0;
