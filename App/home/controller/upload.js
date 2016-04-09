@@ -65,7 +65,7 @@ var _default = (function (_Base) {
     };
 
     _default.prototype.addAction = function addAction() {
-        var data, model, id;
+        var data, model, id, catId, cat;
         return _regeneratorRuntime.async(function addAction$(context$2$0) {
             while (1) switch (context$2$0.prev = context$2$0.next) {
                 case 0:
@@ -76,9 +76,15 @@ var _default = (function (_Base) {
 
                 case 4:
                     id = context$2$0.sent;
-                    return context$2$0.abrupt('return', this.success(data));
+                    catId = this.post('nav');
+                    context$2$0.next = 8;
+                    return _regeneratorRuntime.awrap(this.model('category').updateNum(catId));
 
-                case 6:
+                case 8:
+                    cat = context$2$0.sent;
+                    return context$2$0.abrupt('return', this.success(id));
+
+                case 10:
                 case 'end':
                     return context$2$0.stop();
             }

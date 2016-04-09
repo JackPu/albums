@@ -1,7 +1,8 @@
+.DS_Store
 App/Runtime/Data/app.pid
 App/Runtime/Cache
 node_modules/
 output/
 output.tar.gz
 sftp-config.json
-www/statuc/upload/
+www/static/upload/

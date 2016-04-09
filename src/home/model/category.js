@@ -1,21 +1,9 @@
 'use strict';
 /**
- * category model
+ * model
  */
-export default class extends think.model.mongo {
-    init(...args) {
-        super.init(...args);
-        //配置索引
-        this.indexes = {
-            id: 1,
-        }
-    }
+import CatModel from '../../common/model/category.js';
+export default class extends CatModel {
+    
 
-    addCat(...args) {
-        return this.add({
-            name: 'Design',
-            num: 10012,
-            desc: 'Design'
-        })
-    }
 }

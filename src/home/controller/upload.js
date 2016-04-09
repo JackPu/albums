@@ -52,7 +52,9 @@ export default class extends Base {
         let data = this.post();
         let model = this.model('post');
         let id = await this.model('post').addPost(data);
-        return this.success(data);
+        let catId = this.post('nav');
+        let cat = await this.model('category').updateNum(catId);
+        return this.success(id);
     }
     
 

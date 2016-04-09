@@ -7890,6 +7890,9 @@ button.close {
   font-size: 1.4rem;
   line-height: 2.5;
 }
+.posts-list {
+  margin-top: 30px;
+}
 .posts-list img {
   width: 100%;
   min-height: 100%;
@@ -7907,6 +7910,9 @@ button.close {
   position: relative;
   margin-bottom: 1rem;
   padding-top: 100%;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, 0.1);
 }
 .posts-list .post-item .like-num-wrap {
   position: absolute;
@@ -7982,6 +7988,36 @@ button.close {
     margin: 0;
   }
 }
+.c-home .js-main {
+  background: #f9f9f9;
+}
+.c-home .container {
+  position: relative;
+}
+.c-home .btn-create-new,
+.c-home .btn-manage {
+  display: block;
+  position: absolute;
+  top: -1.25rem;
+  right: 1rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: #4099ff;
+  border-radius: 50%;
+  font-size: 1.2rem;
+  line-height: 2.5rem;
+  text-align: center;
+  color: #fff;
+}
+.c-home .btn-create-new:hover,
+.c-home .btn-manage:hover {
+  text-decoration: none;
+  box-shadow: 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
+.c-home .btn-manage {
+  background: #535353;
+  right: 4rem;
+}
 .c-upload .btn-upload-image {
   margin: 20px;
   height: 220px;
@@ -7993,23 +8029,36 @@ button.close {
 }
 .c-upload .preview-image {
   position: relative;
+  overflow: hidden;
   height: 220px;
   margin: 20px;
   text-align: center;
 }
 .c-upload .preview-image img {
-  height: 100%;
+  margin-left: -25%;
+  max-height: 150%;
+  width: 150%;
 }
 .c-upload .preview-image .btn-remove-image {
   position: absolute;
   right: 20px;
   top: 10px;
   width: 2rem;
-  padding: .3rem 0;
+  height: 2rem;
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  line-height: 2rem;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  color: #fff;
 }
 .c-upload .form-group {
   margin-left: 20px;
   margin-right: 20px;
+}
+.c-upload .form-done {
+  padding-top: 5rem;
+  text-align: center;
+}
+.c-upload .form-done .btn-list {
+  padding-top: 2rem;
 }

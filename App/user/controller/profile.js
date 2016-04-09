@@ -69,6 +69,31 @@ var _default = (function (_Base) {
         }, null, this);
     };
 
+    _default.prototype.addcatAction = function addcatAction() {
+        var catName, desc, id;
+        return _regeneratorRuntime.async(function addcatAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    catName = this.post('cat');
+                    desc = this.post('desc');
+                    context$2$0.next = 4;
+                    return _regeneratorRuntime.awrap(this.model('category').add({
+                        "name": catName,
+                        "desc": desc,
+                        "num": 0
+                    }));
+
+                case 4:
+                    id = context$2$0.sent;
+                    return context$2$0.abrupt('return', this.success(id));
+
+                case 6:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
+    };
+
     return _default;
 })(_baseJs2['default']);
 

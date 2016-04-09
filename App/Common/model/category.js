@@ -7,6 +7,8 @@ var _inherits = require('babel-runtime/helpers/inherits')['default'];
 
 var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
 
+var _regeneratorRuntime = require('babel-runtime/regenerator')['default'];
+
 exports.__esModule = true;
 
 var _default = (function (_think$model$mongo) {
@@ -32,12 +34,34 @@ var _default = (function (_think$model$mongo) {
         };
     };
 
-    _default.prototype.addCat = function addCat() {
-        return this.add({
-            name: 'Design',
-            count: 1000,
-            desc: 'Design'
-        });
+    _default.prototype.add = function add(cat) {
+        return this.add(cat);
+    };
+
+    _default.prototype.queryOne = function queryOne(id) {
+        return this.select({ "_id": id });
+    };
+
+    // 更新数据
+
+    _default.prototype.updateNum = function updateNum(id) {
+        var data, num;
+        return _regeneratorRuntime.async(function updateNum$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    context$2$0.next = 2;
+                    return _regeneratorRuntime.awrap(this.where({ '_id': id }).select());
+
+                case 2:
+                    data = context$2$0.sent;
+                    num = data[0]['num'] + 1;
+                    return context$2$0.abrupt('return', this.where({ '_id': id }).update({ 'num': num }));
+
+                case 5:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
     };
 
     return _default;

@@ -1,9 +1,9 @@
 // 入口文件
-define(['angularAMD', 'angular-route','directive/pagination'], function (angularAMD) {
+define(['angularAMD', 'angular-route','directive/pagination','ui.bootstrap'], function (angularAMD) {
   
 
     
-  var app = angular.module("webapp", ['ngRoute','Vued.directives.pagination']);
+  var app = angular.module("webapp", ['ngRoute','Vued.directives.pagination','ui.bootstrap']);
   
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider

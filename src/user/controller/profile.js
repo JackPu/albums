@@ -19,6 +19,17 @@ export default class extends Base {
         let user = await this.model('user').select();
         this.success(user[0]);
     }
+    
+    async addcatAction() {
+        let catName = this.post('cat');
+        let desc = this.post('desc');
+        let id = await this.model('category').add({
+            "name": catName,
+            "desc": desc,
+            "num": 0
+        });
+        return this.success(id);
+    }
 
 
 }

@@ -7,7 +7,7 @@ define(['app','swipebox','core.image.upload'], function (app) {
         
         
         $scope.init = function() {
-               
+            //$scope.formData.url = 'https://d13yacurqjgara.cloudfront.net/users/29459/screenshots/850410/dropdown_menu_ui.jpg';   
             $scope.bind();
         };
         
@@ -20,12 +20,16 @@ define(['app','swipebox','core.image.upload'], function (app) {
         
         $scope.save = function(e) {
             e.preventDefault();
+            e.target.disabled = true;
+            e.target.innerHTML = '保存中...';
             App.send('/home/upload/add',{
                 type:'post',
                 data:$scope.formData,
                 success: function(result) {
-                    if(result.errcode == 0) {
-                    
+                    e.target.disabled = false;
+                    if(result.errno == 0) {
+                        $scope.id = result.data;
+                        $scope.$apply();
                     }else{
                         return App.sendMessage(result.errstr);
                     }
