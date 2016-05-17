@@ -29,7 +29,7 @@ node www/idnex.js
 
 About more configuration you can view [thinkjs](https://github.com/75team/thinkjs)
 
-We also use [angula-AMD](https://github.com/marcoslin/angularAMD) and [react-canvas](https://github.com/Flipboard/react-canvas)
+We also use [angular-AMD](https://github.com/marcoslin/angularAMD) and [react-canvas](https://github.com/Flipboard/react-canvas)
 
 
 ### NOSQL

@@ -19,7 +19,7 @@
     "babel-runtime": "^5.6.17",
     "mongodb": "^2.0.48",
     "mongoose": "*",
-    "thinkjs": "2.0.4"
+    "thinkjs": "^2.0.4"
   },
   "devDependencies": {
     "gulp": "*",

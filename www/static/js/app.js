@@ -1,5 +1,5 @@
 // 入口文件
-define(['angularAMD', 'angular-route','directive/pagination','ui.bootstrap','ng-progress'], function (angularAMD) {
+define(['angularAMD', 'directive/pagination','ui.bootstrap'], function (angularAMD) {
   
 
     

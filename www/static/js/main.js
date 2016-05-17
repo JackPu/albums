@@ -13,7 +13,7 @@ require.config({
         'base': 'base',
         'angular': 'http://s1.vued.vanthink.cn/f1906f08fcd2/angular.1.3.2.min',
         'angular-route': 'http://s1.vued.vanthink.cn/angular-route',
-        'angularAMD': 'http://s1.vued.vanthink.cn/angularAMD.min',
+        'angularAMD': 'http://s1.vued.vanthink.cn/angularAMD.route.all',
         'ui.bootstrap': 'http://s1.vued.vanthink.cn/f56c808c0d0d/angular.ui.bootstrap.min',
         'validator': LIB_PATH + 'validator.min',
         'core.image.upload': LIB_PATH + 'jquery.core.image.upload.min',
