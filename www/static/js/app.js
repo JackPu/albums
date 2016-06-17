@@ -1,9 +1,9 @@
 // 入口文件
-define(['angularAMD', 'directive/pagination','ui.bootstrap'], function (angularAMD) {
+define(['angularAMD', 'directive/pagination','ui.bootstrap','ng-message'], function (angularAMD) {
   
 
     
-  var app = angular.module("webapp", ['ngRoute','Vued.directives.pagination','ui.bootstrap','ngProgress']);
+  var app = angular.module("webapp", ['ngRoute','Vued.directives.pagination','ui.bootstrap','ngProgress','ngMessages']);
   
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider

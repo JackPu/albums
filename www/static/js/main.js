@@ -18,6 +18,7 @@ require.config({
         'validator': LIB_PATH + 'validator.min',
         'core.image.upload': LIB_PATH + 'jquery.core.image.upload.min',
         'ng-progress': 'http://s1.vued.vanthink.cn/ngprogress.min',
+        'ng-message':'http://s1.vued.vanthink.cn/0c567b6c3a68/angular-messages.min',
         
     //end lib 
         'base': JS_PATH + 'base',
@@ -31,6 +32,7 @@ require.config({
         },
         'ui.bootstrap':['angular'],
         'ng-progress':['angular'],
+        'ng-message':['angular'],
         
     },
     deps: ['app']

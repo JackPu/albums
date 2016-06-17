@@ -7,14 +7,17 @@
         <div class="form-group">
             <button type="button" class="btn btn-default">修改头像</button>
         </div>
-        <form class="m-form text-left">
+        <form name="edit" class="m-form text-left">
             <div class="form-group">
                 <label for="js-user-name">Username</label>
-                <input type="text" id="js-user-name" class="form-control" value="<%=user['username']%>" placeholder="your username">
+                <input type="text" id="js-user-name" class="form-control" required value="<%=user['username']%>" placeholder="your username">
             </div>
             <div class="your address">
-                <label for="js-user-address">Address</label>
-                <input type="text" id="js-user-address"  class="form-control" value="<%=user['address']%>" placeholder="your address">
+                <label for="js-user-address">Location</label>
+                <input type="text" id="js-user-address" name="address" class="form-control" value="<%=user['address']%>" ng-maxLength="20" placeholder="your address">
+                <div ng-messages="edit.address.$error">
+                    <p ng-message="<validationName>">Location is too long</p>
+                </div>
             </div>
              <div class="your address">
                 <label for="js-user-address">Your SNS</label>

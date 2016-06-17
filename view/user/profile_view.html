@@ -3,7 +3,7 @@
     <div class="user-info">
         <img class="avatar" src="/static/img/my-photos.jpg" />
         <div class="username"><%=user['username']%></div>
-        <div class="address"><span class="icon-location-pin"></span> Beijing China</div>
+        <div class="address"><span class="icon-location-pin"></span> <%=user['address']%></div>
         <div class="social-group">
             <a href="" class="icon-instagram" title="instagram"></a>
             <a href="" class="icon-twitter" title="google-plus"></a>
@@ -13,7 +13,7 @@
             your quote        
         </div>
         <div class="text-center">
-            <button type="button" class="btn btn-primary">编辑个人资料</button>    
+            <a href="#/user/edit"  class="btn btn-primary">Edit Profile</A>    
         </div>
     </div>
     <div class="settings-nav">

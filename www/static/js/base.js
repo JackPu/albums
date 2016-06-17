@@ -18,7 +18,6 @@
 
     window.JS_ROOT = '/public/js/';
     window.JS_MODULES = '';
-    console.log('Vanthink App loaded ' + core.version + '\n\n' + "%c ♥ WEB? %cJoin Us Here: %c http://t.cn/RG6FJls" ,'color:red;','color:#222','color:#1ba1e2');
 
     // data model
 
