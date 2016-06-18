@@ -63,6 +63,16 @@ var _default = (function (_Base) {
         }, null, this);
     };
 
+    _default.prototype.cropAction = function cropAction() {
+        return _regeneratorRuntime.async(function cropAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
+    };
+
     _default.prototype.modelAction = function modelAction() {
         var user, model, id;
         return _regeneratorRuntime.async(function modelAction$(context$2$0) {

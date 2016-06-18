@@ -16,7 +16,7 @@ require.config({
         'angularAMD': 'http://s1.vued.vanthink.cn/angularAMD.route.all',
         'ui.bootstrap': 'http://s1.vued.vanthink.cn/f56c808c0d0d/angular.ui.bootstrap.min',
         'validator': LIB_PATH + 'validator.min',
-        'core.image.upload': LIB_PATH + 'jquery.core.image.upload.min',
+        'core.image.upload':'http://s1.vued.vanthink.cn/0f1a6c5af27d3924a0abfd751ecc1160/jquery.core.image.upload.full.min',
         'ng-progress': 'http://s1.vued.vanthink.cn/ngprogress.min',
         'ng-message':'https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.3.2/angular-messages.min',
         
@@ -33,6 +33,7 @@ require.config({
         'ui.bootstrap':['angular'],
         'ng-progress':['angular'],
         'ng-message':['angular'],
+        'core.image.upload':['jquery']
         
     },
     deps: ['app']

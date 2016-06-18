@@ -16,6 +16,10 @@ export default class extends Base {
 
         this.success(user[0]);
     }
+    
+    async cropAction() {
+        
+    }
 
     async modelAction() {
         let user = JSON.parse(this.post('data'));

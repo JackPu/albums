@@ -1,5 +1,5 @@
 // user/edit.js
-define(['app'], function (app) {  
+define(['app','core.image.upload'], function (app) {  
     app.controller('EditCtrl', function ($scope,$routeParams,$http,$location) {
         $scope.urlReg = 'https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)';   
         
@@ -10,6 +10,16 @@ define(['app'], function (app) {
                 this.user = {
                 };  
                 this.refresh();
+                
+                $(".btn-edit-avatar").coreImageUpload ({
+                    url: "./crop.php",
+                    inputOfFile: 'image',
+                    enableCrop: true,
+                    cropRatio: '1:1',
+                    uploadedCallback: function (result) {
+                        
+                    }
+                });
                 
             },
             
