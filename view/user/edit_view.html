@@ -1,60 +1,62 @@
-<div class="components c-user-profile c-user-edit">
-    <div class="cover" style="background-image:url(<%=user['cover']%>)">
+<div class="components c-user-profile c-user-edit" ng-init="init()">
+    <div class="cover" style="background-image:url({{user['cover']}})">
         <div class="edit-cover"></div>
     </div>
     <div class="user-info">
-        <img class="avatar" src="/static/img/my-photos.jpg" />
+        <img class="avatar" ng-src="{{user['avatar']}}" />
+        
         <div class="form-group">
             <button type="button" class="btn btn-default">修改头像</button>
         </div>
-        <form name="edit" class="m-form text-left">
+        <form name="edit" class="m-form text-left" novalidate>
+            <input type="hidden" name="uid" ng-model="user.uid" />
             <div class="form-group">
                 <label for="js-user-name">Username</label>
-                <input type="text" id="js-user-name" class="form-control" required value="<%=user['username']%>" placeholder="your username">
+                <input type="text" ng-model="user.username" name="username" id="js-user-name" class="form-control" required  ng-maxlength="30" placeholder="your username">
+                <div ng-messages="edit.username.$error" role="alert" ng-if="edit.username.$touched">
+                    <p ng-message="maxlength">Username is too long</p>
+                    <p ng-message="required">This file is required</p>
+                </div>
             </div>
             <div class="your address">
                 <label for="js-user-address">Location</label>
-                <input type="text" id="js-user-address" name="address" class="form-control" value="<%=user['address']%>" ng-maxLength="20" placeholder="your address">
+                <input type="text" ng-model="user.address" id="js-user-address" name="address" class="form-control" ng-maxlength="20" placeholder="your address">
                 <div ng-messages="edit.address.$error">
-                    <p ng-message="<validationName>">Location is too long</p>
+                    <p ng-message="maxlength">Location is too long</p>
                 </div>
             </div>
-             <div class="your address">
+             <div class="your sns">
                 <label for="js-user-address">Your SNS</label>
                  <div class="input-group">
-                    <div class="input-group-addon icon-instagram"></div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                </div>
+                    <div class="input-group-addon icon-instagram" ng-pattern="" ></div>
+                    <input type="text" ng-model="user.socialSites.instagram" name="instagram" class="form-control" id="exampleInputAmount" placeholder="http://">
+                 </div>
                  <div class="input-group">
                     <div class="input-group-addon icon-facebook"></div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                </div>
+                    <input type="text" ng-model="user.socialSites.facebook" class="form-control" name="facebook" ng-pattern="urlReg" id="exampleInputAmount" placeholder="http://">
+                 </div>
                 <div class="input-group">
                     <div class="input-group-addon icon-twitter"></div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                </div>
-                <div class="input-group">
-                    <div class="input-group-addon icon-google"></div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <input type="text" ng-model="user.socialSites.twitter" class="form-control" id="exampleInputAmount" placeholder="http://">
                 </div>
                  <div class="input-group">
                     <div class="input-group-addon icon-pinterest"></div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                    <input type="text" ng-model="user.socialSites.pinterest" class="form-control" id="exampleInputAmount" placeholder="http://">
                 </div>
-                <div class="input-group">
-                    <div class="input-group-addon icon-github"></div>
-                    <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
-                </div>
+
                  
             </div>
             <div class="form-group">
                 <label for="js-user-name">Description</label>
-                <textarea class="form-control" style="height:70px;"></textarea>
+                <textarea name="desc" ng-model="user.desc" class="form-control" ng-maxlength="120" style="height:70px;"></textarea>
+                <div ng-messages="edit.desc.$error">
+                    <p ng-message="maxlength">This field is limited to 120</p>
+                </div>
             </div>
         </form>
         <div class="text-center">
-            <button type="button" class="btn btn-default">Give Up</button> 
-            <button type="button" class="btn btn-primary">Save</button>
+            <a href="#user/profile" class="btn btn-default">Give Up</a> 
+            <button type="button"  class="btn btn-primary" ng-click="save($event)">Save</button>
         </div>
     </div>
    

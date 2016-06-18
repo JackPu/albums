@@ -11,7 +11,7 @@ export default class extends think.logic.base {
      */
     indexAction() {
 
-    },
+    }
         
     modelAction() {
         this.allowMethods = "post";

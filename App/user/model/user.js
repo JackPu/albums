@@ -36,6 +36,16 @@ var _default = (function (_think$model$mongo) {
         return this.add(user);
     };
 
+    _default.prototype.updateUser = function updateUser(user) {
+        return this.where({ '_id': user.uid }).update({
+            'avatar': user['avatar'],
+            'username': user['username'],
+            'address': user['address'],
+            'desc': user['desc'],
+            'socialSites': user['socialSites']
+        });
+    };
+
     _default.prototype.checkLogin = function checkLogin(email, pass) {
         return this.where({ email: email, pass: pass }).select();
     };

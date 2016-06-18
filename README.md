@@ -31,6 +31,21 @@ About more configuration you can view [thinkjs](https://github.com/75team/thinkj
 
 We also use [angular-AMD](https://github.com/marcoslin/angularAMD) and [react-canvas](https://github.com/Flipboard/react-canvas)
 
+### Image Crop
+
+We need [EasyImage](https://github.com/hacksparrow/node-easyimage) to crop image. You should install imagemagick on youe server;
+
+``` bash
+// On Ubuntu
+apt-get install imagemagick
+
+// On Mac OS X
+brew install imagemagick
+
+// On CentOS
+yum install imagemagick
+```
+
 
 ### NOSQL
 
@@ -104,4 +119,6 @@ Design by Carl Hauser https://dribbble.com/carlhauser
 
 ### MIT License
 
-Node v.0.12.0
+[MIT License](https://github.com/JackPu/albums)
+
+My native Node v.0.12.0
