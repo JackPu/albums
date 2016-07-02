@@ -52,7 +52,10 @@ var _default = (function (_think$controller$base) {
             // user
             '101': 'user not login',
             '102': 'user email and password error',
-            '111': 'password not match'
+            '111': 'password not match',
+
+            // category
+            '3000': 'Category name is empty'
         };
         var msg = API_ERROR_MSG_TABLE[errno] || 'system error';
         console.log(msg);

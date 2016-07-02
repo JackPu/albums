@@ -17,34 +17,34 @@
         </div>
     </div>
     <div class="settings-nav">
-        <a href="">图片</a>
-        <a href="">类别</a>    
+        
+        <a href="">Category</a> 
+        <a href="">Tags</a>
     </div>
     <div class="contents">
-        <div class="container" style="display:none;">
-            <form class="form-inline text-right">
-                <button class="btn btn-danger"><span class="icon icon-trash"></span> 批量删除</button>
-                <button class="btn btn-default "><span class="icon icon-settings"></span> 图片管理</button>
-            </form>
-            <div class="post-list">
-                    
-            </div>
-        </div>
+        
         <div class="edit-navigation">
             <form action="post">
+                <%category.forEach(function(item){%>
                 <div class="form-group">
                     <div class="input-group">
-                        <div class="input-group-addon">::</div>
-                        <input type="text" class="form-control" id="exampleInputAmount" placeholder="Amount">
+                        
+                        <input type="text" class="form-control" value="<%=item['name']%>" id="exampleInputAmount" placeholder="category">
+                        <a href="javascirpt:;" class="input-group-addon" ng-click="editCatEvent('<%=item['_id']%>','<%=item['name']%>','<%=item['desc']%>')"><span class="icon-pencil"></span></a>
+                        <a href="javascirpt:;" class="input-group-addon" ng-click="removeCatEvent('<%=item['_id']%>','<%=item['name']%>')"><span class="icon-close"></span></a>
+                        
                     </div>
                 </div>
+                <%})%>
                 <div class="form-group">
                     <button type="button" class="btn btn-primary form-control" ng-click="cerateCatEvent()">添加分类</button>
                 </div>
+                
             </form>
         </div>
     </div>
 </div>
+<!--modal add category-->            
  <script type="text/ng-template" id="create-cat.html">
     <div class="modal-header">
         <h3 class="modal-title">Create Category</h3>
@@ -61,6 +61,43 @@
     </div>
     <div class="modal-footer">
         <button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+        <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+        
+<!--modal edit category-->            
+ <script type="text/ng-template" id="edit-cat.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Edit Category</h3>
+    </div>
+    <div class="modal-body">
+        <div class="m-form">
+            <div class="form-group">
+                <input type="text" ng-model="newCatName" autofocus placeholder="your category name"  class="form-control"/>
+            </div>
+            <div class="form-group">
+                <textarea ng-model="newCatDesc"  placeholder="your category description"  class="form-control" style="height:120px;"/>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-disabled="newCatName==oldCatName && newCatDesc==oldCatDesc" ng-click="save()">Save</button>
+        <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+        
+<!--modal confirm delete-->            
+ <script type="text/ng-template" id="remove-cat.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Detele this category?</h3>
+    </div>
+    <div class="modal-body">
+        <div class="m-form">
+            <p>Are You sure delete this <strong>{{::catname}}</strong> category?</p>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="done()">Save</button>
         <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
     </div>
 </script>

@@ -10,7 +10,8 @@ export default class extends Base {
     async viewAction() {
         
         let user = await this.model('user').select();
-        
+        let categoryData = this.model('category').select();
+        this.assign("category", categoryData);
         this.assign("user", user[0]);
         return this.display();
     }
@@ -30,6 +31,28 @@ export default class extends Base {
         });
         return this.success(id);
     }
+    
+    async editcatAction() {
+        let catid = this.post('catid');
+        let name = this.post('name');
+        let desc = this.post('desc');
+        
+        if(!name) {
+            this.apiErrorHandle(3000);
+        }
+        
+        let id = await this.model('category').updatebyid(catid,name,desc);
+        this.success(id);
+    }
+    
+    // remove cat
+    async removecatAction() {
+        let catid = this.post('catid');
+        let isSuccess = await this.model('category').removebyid(catid);
+        return this.success(isSuccess);
+    }
+    
+    
 
 
 }

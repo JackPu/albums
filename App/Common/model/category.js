@@ -3,11 +3,11 @@
  * category model
  */
 
-var _inherits = require('babel-runtime/helpers/inherits')['default'];
+var _inherits = require("babel-runtime/helpers/inherits")["default"];
 
-var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
+var _classCallCheck = require("babel-runtime/helpers/class-call-check")["default"];
 
-var _regeneratorRuntime = require('babel-runtime/regenerator')['default'];
+var _regeneratorRuntime = require("babel-runtime/regenerator")["default"];
 
 exports.__esModule = true;
 
@@ -42,6 +42,20 @@ var _default = (function (_think$model$mongo) {
         return this.select({ "_id": id });
     };
 
+    // remove category
+
+    _default.prototype.removebyid = function removebyid(id, name, desc) {
+        return this.where({ "_id": id })["delete"]();
+        return this.where({ '_id': id }).update({ 'num': num });
+    };
+
+    _default.prototype.updatebyid = function updatebyid(id, name, desc) {
+        return this.where({ "_id": id }).update({
+            "desc": desc,
+            "name": name
+        });
+    };
+
     // 更新数据
 
     _default.prototype.updateNum = function updateNum(id) {
@@ -55,10 +69,10 @@ var _default = (function (_think$model$mongo) {
                 case 2:
                     data = context$2$0.sent;
                     num = data[0]['num'] + 1;
-                    return context$2$0.abrupt('return', this.where({ '_id': id }).update({ 'num': num }));
+                    return context$2$0.abrupt("return", this.where({ '_id': id }).update({ 'num': num }));
 
                 case 5:
-                case 'end':
+                case "end":
                     return context$2$0.stop();
             }
         }, null, this);
@@ -67,5 +81,5 @@ var _default = (function (_think$model$mongo) {
     return _default;
 })(think.model.mongo);
 
-exports['default'] = _default;
-module.exports = exports['default'];
+exports["default"] = _default;
+module.exports = exports["default"];

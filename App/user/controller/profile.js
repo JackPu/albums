@@ -29,7 +29,7 @@ var _default = (function (_Base) {
      */
 
     _default.prototype.viewAction = function viewAction() {
-        var user;
+        var user, categoryData;
         return _regeneratorRuntime.async(function viewAction$(context$2$0) {
             while (1) switch (context$2$0.prev = context$2$0.next) {
                 case 0:
@@ -38,11 +38,13 @@ var _default = (function (_Base) {
 
                 case 2:
                     user = context$2$0.sent;
+                    categoryData = this.model('category').select();
 
+                    this.assign("category", categoryData);
                     this.assign("user", user[0]);
                     return context$2$0.abrupt('return', this.display());
 
-                case 5:
+                case 7:
                 case 'end':
                     return context$2$0.stop();
             }
@@ -88,6 +90,56 @@ var _default = (function (_Base) {
                     return context$2$0.abrupt('return', this.success(id));
 
                 case 6:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
+    };
+
+    _default.prototype.editcatAction = function editcatAction() {
+        var catid, name, desc, id;
+        return _regeneratorRuntime.async(function editcatAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    catid = this.post('catid');
+                    name = this.post('name');
+                    desc = this.post('desc');
+
+                    if (!name) {
+                        this.apiErrorHandle(3000);
+                    }
+
+                    context$2$0.next = 6;
+                    return _regeneratorRuntime.awrap(this.model('category').updatebyid(catid, name, desc));
+
+                case 6:
+                    id = context$2$0.sent;
+
+                    this.success(id);
+
+                case 8:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
+    };
+
+    // remove cat
+
+    _default.prototype.removecatAction = function removecatAction() {
+        var catid, isSuccess;
+        return _regeneratorRuntime.async(function removecatAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    catid = this.post('catid');
+                    context$2$0.next = 3;
+                    return _regeneratorRuntime.awrap(this.model('category').removebyid(catid));
+
+                case 3:
+                    isSuccess = context$2$0.sent;
+                    return context$2$0.abrupt('return', this.success(isSuccess));
+
+                case 5:
                 case 'end':
                     return context$2$0.stop();
             }
