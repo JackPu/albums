@@ -81,10 +81,6 @@ environment = NODE_ENV="production"
 
 ```
 
-### Demo
-
-This is My albums http://design.jackpu.com
-
 
 ### Thanks 
 
@@ -92,33 +88,8 @@ Design by Carl Hauser https://dribbble.com/carlhauser
 
 
 
-### modules
-
-+ user 
-    + login ok
-    + register ok
-    + profile 
-+ post 
-    + add 
-    + edit
-    + remove
-    + search
-+ tags
-    + add 
-    + search
-    
-+ cats 
-    + add 
-    + search post by cats
-
-+ font-end 
-    + uplaod
-    + add qiniu
-    + bootstrap4
-
 
 ### MIT License
 
 [MIT License](https://github.com/JackPu/albums)
 
-My native Node v.0.12.0
