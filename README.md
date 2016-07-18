@@ -86,7 +86,7 @@ environment = NODE_ENV="production"
 
 Design by Carl Hauser https://dribbble.com/carlhauser
 
-
+Thanks to [koshiki](http://koshiki-stay.jp/)
 
 
 ### MIT License
