@@ -8,20 +8,21 @@
                     <a href="tag"><%=item['name']%></a>
                 <%})%>
             </div-->
-            <a href="#upload" class="btn-create-new icon-plus"></a>
-            <a href="#/user/profile" class="btn-manage icon-settings"></a>
-            <div class="posts-list">
-                <div class="post-item col-3" ng-repeat="item in list">
-                    <a href="#detail/{{item._id}}">
-                    <img alt="上传图片" ng-src="{{item.url}}" />
-                        <!--div class="like-num-wrap">
-                            <span class="icon-heart"></span>
-                            <span class="num">100</span>
-                        </div-->
-                        <div class="details">
+            <!--a href="#upload" class="btn-create-new icon-plus"></a>
+            <a href="#/user/profile" class="btn-manage icon-settings"></a-->
+            <div class="posts-list row">
+                <div class="col-md-4 item" ng-repeat="item in list">
+                    <div class="post-item">
+                        <a href="#detail/{{item._id}}">
+                            <img alt="上传图片" ng-src="{{item.url}}" />
+                                <!--div class="like-num-wrap">
+                                    <span class="icon-heart"></span>
+                                    <span class="num">100</span>
+                                </div-->
                             <div class="title">{{item.title}}</div>
-                        </div>
-                    </a>
+    
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
