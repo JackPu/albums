@@ -1,7 +1,7 @@
 // 入口文件
 define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
     
-  var app = angular.module("webapp", ['ngRoute','Vued.directives.pagination','ui.bootstrap','ngProgress','ngMessages']);
+  var app = angular.module("webapp", ['ngRoute','ui.bootstrap','ngProgress','ngMessages']);
   
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
