@@ -58,8 +58,18 @@
   background-clip: padding-box;
   // Remove focus outline from opened modal
   outline: 0;
+    
+     
 }
-
+.modal.nobg .modal-content{
+    box-shadow: none;
+    background-color: transparent;
+    border:none;
+    
+    .modal-header {
+      border-bottom:0px;	   
+    }
+  } 
 // Modal background
 .modal-backdrop {
   position: fixed;
@@ -83,7 +93,14 @@
 }
 // Close icon
 .modal-header .close {
-  margin-top: -2px;
+  position: absolute;
+  right:-60px;    
+  width:45px;
+  height: 45px;
+  border-radius: 100%;    
+  border:1px solid #999;
+  text-align: center;
+  line-height: 45px;    
 }
 
 // Title text within header

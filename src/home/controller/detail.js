@@ -13,6 +13,13 @@ export default class extends Base {
         return this.display();
     }
     
+    async modelAction(){
+        const id = this.get('id');
+        let model = this.model('post');
+        let data = await model.queryOne(id);
+        this.success(data[0]);
+    }
+    
 
 
 }

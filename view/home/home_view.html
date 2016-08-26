@@ -33,13 +33,30 @@
 
 <script type="text/ng-template" id="detail.html">
     <div class="modal-header">
-        <h3 class="modal-title">{{::name}}</h3>
+        <h3 class="modal-title">{{::data.name}}
+            <a href="javascript::" class="close icon-close"></a>
+        </h3>
     </div>
     <div class="modal-body">
-
+        <div class="post-single">
+               
+            <img ng-src="{{data.url}}" alt="image">
+            <div class="title">
+                {{data.title}}
+            </div>
+            <div class="date-info">
+                <span class="icon-cloud-upload"></span>  {{data.date}}
+            </div>
+            <div class="desc">
+                 {{data.contents}}
+            </div>
+            <!--div class="tag-list">
+                <a href="">Web</a>
+                <a href="" class="selected">UI</a>
+            </div-->
+        </div>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="ok()">OK</button>
-        <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+        浏览次数:123123
     </div>
 </script>

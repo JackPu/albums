@@ -46,6 +46,28 @@ var _default = (function (_Base) {
         }, null, this);
     };
 
+    _default.prototype.modelAction = function modelAction() {
+        var id, model, data;
+        return _regeneratorRuntime.async(function modelAction$(context$2$0) {
+            while (1) switch (context$2$0.prev = context$2$0.next) {
+                case 0:
+                    id = this.get('id');
+                    model = this.model('post');
+                    context$2$0.next = 4;
+                    return _regeneratorRuntime.awrap(model.queryOne(id));
+
+                case 4:
+                    data = context$2$0.sent;
+
+                    this.success(data[0]);
+
+                case 6:
+                case 'end':
+                    return context$2$0.stop();
+            }
+        }, null, this);
+    };
+
     return _default;
 })(_baseJs2['default']);
 

@@ -22,11 +22,30 @@ define(['app'], function (app) {
         };
 
         $scope.viewDetail = function () {
+            var id = this.item['_id'];
             var modalInstance = $uibModal.open({
                 animation: $scope.animationsEnabled,
                 templateUrl: 'detail.html',
+                windowClass:'nobg',
                 controller: function($scope,$uibModalInstance) {
+                    $scope.animalModel = {};
+                    $scope.getDetail = function() {
+                        App.send('/home/detail/model',{
+                            data:{
+                                id: id,
+                            },
+                            success: function(res) {
+                                if(res.errno==0) {
+                                    $scope.data = res.data;
+                                    console.log($scope.data);
+                                    $scope.$apply();
+                                }
+                            }
+                        });    
+                    };
                     
+                    $scope.cancel = function() {};
+                    $scope.getDetail();
                 },
                 size: 'lg',
                 resolve: {
