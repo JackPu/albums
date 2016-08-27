@@ -37,14 +37,16 @@ define(['app'], function (app) {
                             success: function(res) {
                                 if(res.errno==0) {
                                     $scope.data = res.data;
-                                    console.log($scope.data);
+                                    
                                     $scope.$apply();
                                 }
                             }
                         });    
                     };
                     
-                    $scope.cancel = function() {};
+                    $scope.cancel = function() {
+                        $uibModalInstance.dismiss();
+                    };
                     $scope.getDetail();
                 },
                 size: 'lg',
