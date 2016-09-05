@@ -7,7 +7,7 @@ define(['app','core.image.upload'], function (app) {
         
         
         $scope.init = function() {
-            //$scope.formData.url = 'https://d13yacurqjgara.cloudfront.net/users/29459/screenshots/850410/dropdown_menu_ui.jpg';   
+              
             $scope.bind();
         };
         
