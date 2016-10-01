@@ -5,6 +5,13 @@ var plumber = require('gulp-plumber');
 var path = require('path'); 
 var less = require('gulp-less');
 var gutil = require('gulp-util');
+var sync = require('run-sequence');
+var rename = require('gulp-rename');
+var gutil = require( 'gulp-util');
+const tsc = require("gulp-typescript");
+const sourcemaps = require('gulp-sourcemaps');
+const tsProject = tsc.createProject("tsconfig.json");
+const tslint = require('gulp-tslint');
 
 gulp.task('less', function () {
   return gulp.src('www/static/less/*.style.less')
@@ -28,21 +35,64 @@ gulp.task('minifycss',function(){
 
 });
 
-gulp.task('uglifyjs',function(){
-        return gulp.src(path['js'])
-        .pipe(plumber())
-        .pipe(uglify({mangle:false}))
-        .pipe(gulp.dest('dest'));
+/**
+ * Lint all custom TypeScript files.
+ */
+gulp.task('tslint', function(){
+    return gulp.src("AngularApp/**/*.ts")
+        .pipe(tslint({
+            formatter: 'prose'
+        }))
+        .pipe(tslint.report());
+});
 
+gulp.task("compile", function(){
+    var tsResult = gulp.src("AngularApp/**/*.ts")
+        .pipe(sourcemaps.init())
+        .pipe(tsc(tsProject));
+    return tsResult.js
+        .pipe(sourcemaps.write(".", {sourceRoot: '/src'}))
+        .pipe(gulp.dest("www/static/build"));
+});
+
+/**
+ * Copy all resources that are not TypeScript files into build directory.
+ */
+gulp.task("resources", function() {
+    return gulp.src(["AngularApp/**/*", "!**/*.ts"])
+        .pipe(gulp.dest("www/static/build"));
+});
+
+/**
+ * Copy all required libraries into build directory.
+ */
+gulp.task("libs", function(){
+    return gulp.src([
+            'core-js/client/shim.min.js',
+            'systemjs/dist/system-polyfills.js',
+            'systemjs/dist/system.src.js',
+            'reflect-metadata/Reflect.js',
+            'rxjs/**/*.js',
+            'zone.js/dist/**',
+            '@angular/**/bundles/**'
+        ], {cwd: "node_modules/**"}) /* Glob required here. */
+        .pipe(gulp.dest("./www/static/js/lib"));
 });
 
 gulp.task('watch',function(){
     gulp.watch('www/static/less/**/*.less', function(){
         gulp.run('less');
     });
-        //gulp.watch(path['css'],['minifycss']);
-        //gulp.watch(path['js'],['uglifyjs']);
+    gulp.watch(["AngularApp/**/*.ts"], ['compile']).on('change', function (e) {
+        console.log('TypeScript file ' + e.path + ' has been changed. Compiling.');
+    });
+    gulp.watch(["AngularApp/**/*.html", "AngularApp/**/*.css"], ['resources']).on('change', function (e) {
+        console.log('Resource file ' + e.path + ' has been changed. Updating.');
+    });
+});
 
+gulp.task("build", ['compile', 'resources', 'libs'], function() {
+    console.log("Building the project ...");
 });
 
 gulp.task('default',['watch']);

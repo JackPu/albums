@@ -1,29 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include ../common/header.html %>
-<body>
-    
-    <!--big bannar for some events-->
-    
-    <nav class="nav" role="navigation">
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="navbar-header">
-                        <a class="navbar-brand icon-home" href="/"></a>
-                    </div>
-                    <!--ul class="nav navbar-nav navbar-right">
-                        <li><a href="#" class="icon-menu"></a></li>
-                    </ul-->
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div id="page"  ng-view>
-    
-    </div>
 
-<%include ../common/footer.html %>
-</body>
+  <body ng-app="app" ng-strict-di ng-cloak>
+    <app>
+       <div class="enter-animation">
+          <p>加载中...</p>
+       </div>
+    </app>
+
+
+
+  </body>
 
 </html>

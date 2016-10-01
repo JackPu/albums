@@ -1,11 +1,24 @@
 <head>
-<title>J-albums,a lightful photo apps</title>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="photos">
-<link rel="stylesheet" href="/favicon.ico" type="image/x-icon"/>
-<link rel="stylesheet" href="/static/css/user.style.css?v=20150823">
-<link rel="stylesheet" href="http://s1.vued.vanthink.cn/e1b4f5a0eda4/jquery.core.image.upload.min.css" />
+<title>欢迎来到JackZoo-Welcome to JackZoo</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="description" content="NG6-Starter by @AngularClass">
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+
+ <!-- Polyfill(s) for older browsers -->
+  <script src="static/js/lib/core-js/client/shim.min.js"></script>
+
+  <script src="static/js/lib/zone.js/dist/zone.js"></script>
+  <script src="static/js/lib/reflect-metadata/Reflect.js"></script>
+  <script src="static/js/lib/systemjs/dist/system.src.js"></script>
+<!-- 2. Configure SystemJS -->
+<script src="./static/js/systemjs.config.js"></script>
+<script>
+    System.import('app')
+            .then(null, console.error.bind(console));
+</script>
 <base href="/">
 </head>

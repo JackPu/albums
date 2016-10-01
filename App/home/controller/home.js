@@ -30,12 +30,12 @@ var _default = (function (_Base) {
 
     _default.prototype.viewAction = function viewAction() {
         //auto render template file index_index.html
+        return this.display();
         var model = this.model("nav");
         var data = model.select();
         var categoryData = this.model('category').select();
         this.assign("nav", data);
         this.assign("category", categoryData);
-        return this.display();
     };
 
     _default.prototype.modelAction = function modelAction() {
