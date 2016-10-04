@@ -3,14 +3,30 @@
 <% include ../common/header.html %>
 
   <body ng-app="app" ng-strict-di ng-cloak>
-    <app>
-       <div class="enter-animation">
-          <p>加载中...</p>
-       </div>
-    </app>
+    <div class="m-cover">
+      <div class="over-layout"></div>
+      <div class="cover-details">
+        <h3>Captain American Civil War</h3>
+        <div class="views">
+          <span class="icon-control-play"></span>  145677 
+        </div>
+        <div class="btn-group">
+          
+        </div>
+      </div>
+      <a href="" class="watch-now icon-control-play"></a>
+    </div>
+    <div class="main">
+      <form class="m-search">
+        <input type="text" class="form-control" placeholder="动物名称|Animals Name"/>  
+        
+      </form>
+      <div class="m-posts posts-list">
+        <app>Loading...</app>
+      </div>
+    </div>
 
-
-
+  <% include ../common/footer.html %>
   </body>
 
 </html>

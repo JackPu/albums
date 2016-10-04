@@ -39,7 +39,7 @@ gulp.task('minifycss',function(){
  * Lint all custom TypeScript files.
  */
 gulp.task('tslint', function(){
-    return gulp.src("AngularApp/**/*.ts")
+    return gulp.src("./www/static/app/**/*.ts")
         .pipe(tslint({
             formatter: 'prose'
         }))
@@ -47,7 +47,7 @@ gulp.task('tslint', function(){
 });
 
 gulp.task("compile", function(){
-    var tsResult = gulp.src("AngularApp/**/*.ts")
+    var tsResult = gulp.src("./www/static/app/**/*.ts")
         .pipe(sourcemaps.init())
         .pipe(tsc(tsProject));
     return tsResult.js
@@ -59,7 +59,7 @@ gulp.task("compile", function(){
  * Copy all resources that are not TypeScript files into build directory.
  */
 gulp.task("resources", function() {
-    return gulp.src(["AngularApp/**/*", "!**/*.ts"])
+    return gulp.src(["./www/static/app/**/*.ts"])
         .pipe(gulp.dest("www/static/build"));
 });
 
@@ -83,10 +83,10 @@ gulp.task('watch',function(){
     gulp.watch('www/static/less/**/*.less', function(){
         gulp.run('less');
     });
-    gulp.watch(["AngularApp/**/*.ts"], ['compile']).on('change', function (e) {
+    gulp.watch(["./www/static/app/**/*.ts"], ['compile']).on('change', function (e) {
         console.log('TypeScript file ' + e.path + ' has been changed. Compiling.');
     });
-    gulp.watch(["AngularApp/**/*.html", "AngularApp/**/*.css"], ['resources']).on('change', function (e) {
+    gulp.watch(["./www/static/app/**/*.html", "./www/static/app/**/*.css"], ['resources']).on('change', function (e) {
         console.log('Resource file ' + e.path + ' has been changed. Updating.');
     });
 });
