@@ -1,86 +1,110 @@
 .posts-list {
-	margin-top: 30px;
-}
-.posts-list  .item{
-    padding: 10px 20px;
-    margin-top: 30px;
-    text-align: center;
-}
-.posts-list img{
-    width: 100%;
-    height: 100%;
-    position: absolute;  
-    top: 0;
-    left: 0;  
-    right: 0;  
-  
-}
-.posts-list .post-item{
-    overflow: hidden;
-    position: relative;
-    margin-bottom: 1rem;
-    padding-top: 75%;
-    background: #fff;
-    box-shadow: 0 1px 3px -1px rgba(0,0,0,.1);
-}
-.posts-list .post-item .like-num-wrap{
-    position: absolute;
-    top:0;
-    left:0;
-    right: 0;
-    padding: 1rem 1rem; 
-    text-align: right;
-    box-shadow: 2px 0 5px 7px rgba(0,0,0,.1) inset;
-    font-size: 1.25rem;
-}
-.posts-list .post-item .like-num-wrap .num{
-    margin-left: .75rem;
-    font-weight: bold;
-}
-.posts-list .details{
-    display: none;
-    position: absolute;
-    left:0;
-    right: 0;
-    top:0;
-    bottom: 0;
-    padding: 1.25rem 1rem;
-    background: #4099ff;
-    color:#ddd;
-}
-.posts-list .title{
-    font-size: 1rem;
-    line-height: 1.7;
-}
-
-.post-single{
-    max-wdith:720px;
-    position: relative;
-    padding-top: 1rem;
-    padding-bottom: 3rem;
-}
-.post-single img{
-    max-width: 100%;
-    margin-bottom: .75rem;
-}
-
-.post-single .title{
-    font-size: 1.6rem;
-    line-height: 3.5rem;
-    font-weight: 400;
-    color: #111;
-}
-.post-single .date-info{
-	 padding: .5rem 0;
-     font-size: 1rem;
-     color:#999;
-}
-.post-single .date-info .icon-heart{
-    margin-left: 1rem;
-    margin-right: .5rem;
-} 
-.post-single .desc{
-    font-size: 1.2rem;
+  margin-top: 30px;
+  .option-control {
+    border-bottom: 1px solid #ccc;
+    font-size: .75rem;
     line-height: 2rem;
-    color:#777;
+  }
+  .view-details {
+    border-radius: 20px;
+    padding-left: 25px;
+    padding-right: 25px;
+    font-size: .65rem;
+  }
+}
+
+.posts-list .item {
+  padding: 10px 20px;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.posts-list img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, .15);
+}
+
+.posts-list .post-item {
+  position: relative;
+  margin-bottom: 1rem;
+  padding-top: 130%;
+  background: #fff;
+  box-shadow: 0 1px 3px -1px rgba(0, 0, 0, .1);
+}
+
+.posts-list .post-item .like-num-wrap {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: .5rem .75rem;
+  text-align: left;
+  
+  .icon-heart{
+    color:red;
+  }
+}
+
+.posts-list .post-item .like-num-wrap .num {
+  margin-left: .75rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.posts-list .details {
+  display: none;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  padding: 1.2rem 1rem;
+  background: #4099ff;
+  color: #ddd;
+}
+
+.posts-list .title {
+  font-size: .8rem;
+  margin-bottom: 1rem;
+}
+
+.post-single {
+  max-wdith: 720px;
+  position: relative;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.post-single img {
+  max-width: 100%;
+  margin-bottom: .75rem;
+}
+
+.post-single .title {
+  font-size: 1.6rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+  color: #111;
+}
+
+.post-single .date-info {
+  padding: .5rem 0;
+  font-size: 1rem;
+  color: #999;
+}
+
+.post-single .date-info .icon-heart {
+  margin-left: 1rem;
+  margin-right: .5rem;
+}
+
+.post-single .desc {
+  font-size: 1.2rem;
+  line-height: 2rem;
+  color: #777;
 }

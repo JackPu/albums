@@ -3,29 +3,102 @@
 <% include ../common/header.html %>
 
   <body ng-app="app" ng-strict-di ng-cloak>
+    
     <div class="m-cover">
       <div class="over-layout"></div>
       <div class="cover-details">
-        <h3>Captain American Civil War</h3>
+        <h3>The Story Of Megaptera Novaeangliae </h3>
         <div class="views">
-          <span class="icon-control-play"></span>  145677 
+          <span class="icon-control-play"></span> 145677
         </div>
         <div class="btn-group">
-          
+
         </div>
       </div>
       <a href="" class="watch-now icon-control-play"></a>
+      <nav class="navbar navbar-default">
+        <div class="container-fluid nav-list text-center">
+          <a class="logo">JackZoo</a>
+          <a href="#">主页<span class="sr-only">(current)</span></a>
+          <a href="#">类目</a>
+          <a href="#">识趣</a>
+          <a href="#">我们</a>
+        </div>
+      </nav>
     </div>
     <div class="main">
-      <form class="m-search">
-        <input type="text" class="form-control" placeholder="动物名称|Animals Name"/>  
-        
+      <form class="m-search input-group">
+        <input type="text" class="form-control" placeholder="动物名称|Animals Name" />
+        <span class="input-group-btn">
+          <button  class="btn btn-primary icon-search">
+            搜索
+          </button>
+        </span>
+
       </form>
       <div class="m-posts posts-list">
-        <app>Loading...</app>
+        <div class="text-left option-control">
+          列表
+          <div class="pull-right">
+            <a href="javascript:;" title="筛选" class="icon-filter"> 筛选</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 item">
+                <div class="post-item" ng-click="viewDetail()">
+                    <a hreff="#detail/{{item._id}}">
+                       <img alt="上传图片" src="/static/upload/f4zomndn2920160827205217419.jpg" />
+                        <div class="like-num-wrap">
+                            <span class="icon-heart"></span>
+                            <span class="num">100</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="title">{{item.title}}</div>
+                <div class="btn-group">
+                  <a href="" class="btn btn-primary view-details">查看详情</a>
+                </div>
+            </div>
+          <div class="col-md-4 item">
+                <div class="post-item" ng-click="viewDetail()">
+                    <a hreff="#detail/{{item._id}}">
+                       <img alt="上传图片" src="/static/upload/hkug8yf1or20160409144034532.png" />
+                        <div class="like-num-wrap">
+                            <span class="icon-heart"></span>
+                            <span class="num">100</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="title">{{item.title}}</div>
+                <div class="btn-group">
+                  <a href="" class="btn btn-primary view-details">查看详情</a>
+                </div>
+            </div>
+          <div class="col-md-4 item">
+                <div class="post-item" ng-click="viewDetail()">
+                    <a hreff="#detail/{{item._id}}">
+                       <img alt="上传图片" src="/static/upload/jozfjiw9udi20160404101038842.jpg" />
+                        <div class="like-num-wrap">
+                            <span class="icon-heart"></span>
+                            <span class="num">100</span>
+                        </div>
+
+                    </a>
+
+                </div>
+                <div class="title">{{item.title}}</div>
+                <div class="btn-group">
+                  <a href="" class="btn btn-primary view-details">查看详情</a>
+                </div>
+            </div>
+            
+        </div>
       </div>
     </div>
-
   <% include ../common/footer.html %>
   </body>
 

@@ -1,5 +1,8 @@
 #J-albums
 
+[![npm](https://img.shields.io/npm/v/npm.svg?maxAge=2592000)]()
+[![Scrutinizer branch](https://img.shields.io/scrutinizer/coverage/g/JackPu/albums/master.svg?maxAge=2592000)]()
+
 J-albums is an albums apps which use thinkjs(2.0) and angular.
 
 ### start

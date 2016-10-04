@@ -59,7 +59,7 @@ gulp.task("compile", function(){
  * Copy all resources that are not TypeScript files into build directory.
  */
 gulp.task("resources", function() {
-    return gulp.src(["./www/static/app/**/*.ts"])
+    return gulp.src(["./www/static/app/**/*.html"])
         .pipe(gulp.dest("www/static/build"));
 });
 
