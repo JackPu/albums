@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../common/header.html %>
+  <body ng-app="app" ng-strict-di ng-cloak>
+    
+    <div class="m-cover no-cover">
+      <nav class="navbar navbar-default">
+        <div class="container-fluid nav-list text-center">
+          <a class="logo">JackZoo</a>
+          <a href="https://www.jackzoo.org">主页<span class="sr-only">(current)</span></a>
+          <a href="javascript:;">类目</a>
+          <!--a href="#">识趣</a>
+          <a href="#">我们</a-->
+        </div>
+      </nav>
+    </div>
+    <div class="main page-category">
+        <div class="cat-list">
+            <div class="row">
+                <a href="#" class="btn btn-primary"> 动物 </a>
+            </div>
+            <div class="row" id="catlist">
+              <a href="#vertebrates" data-target="vertebrates" class="btn btn-default btn-primary"> 脊椎动物 </a>
+              <a href="#invertebrates" data-target="invertebrates" class="btn btn-default"> 无脊椎动物 </a>
+            </div>
+            <div class="tab-contents">
+              <div class="tab-pane active" role="tabpanel" id="vertebrates">
+                <a href="javascript:;" id="fish" class="btn btn-default"> 鱼类 </a>
+                <a href="javascript:;" class="btn btn-default"> 两栖动物 </a>
+                <a href="javascript:;" class="btn btn-default"> 爬行动物 </a>
+                <a href="javascript:;" class="btn btn-default"> 鸟类 </a>
+                <a href="javascript:;" class="btn btn-default"> 哺乳动物 </a>
+              </div>
+              <div class="tab-pane" role="tabpanel" id="invertebrates">
+                <a href="javascript:;" aria-controls="home" role="tab" class="btn btn-default"> 原生动物 </a>
+                <a href="javascript:;" class="btn btn-default"> 肠腔动物 </a>
+                <a href="javascript:;" class="btn btn-default"> 线形动物 </a>
+                <a href="javascript:;" class="btn btn-default"> 环节动物 </a>
+                <a href="javascript:;" class="btn btn-default"> 软体动物 </a>
+                <a href="javascript:;" class="btn btn-default"> 节肢动物 </a>
+              </div>
+            </div>
+           
+            
+        </div>
+      
+    </div>
+   
+  <% include ../common/footer.html %>
+  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>      
+  <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+  <script type="application/javascript">
+    $(function() {
+        $('#catlist a').click(function (e) {
+            e.preventDefault()
+            $('#catlist a').removeClass('btn-primary');
+            $(this).addClass('btn-primary'); 
+            var t = $(this).attr('data-target');
+            console.log(t);
+            $('.tab-pane').removeClass('active');
+            $('.tab-pane[id="' + t +'"]').addClass('active');
+             
+        })
+    })  
+  </script>      
+  </body>
+
+</html>

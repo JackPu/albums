@@ -1,46 +1,19 @@
 'use strict';
 /**
- * model
- */
+               * model
+               */exports.__esModule = true;var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _class = function (_think$model$mongo) {(0, _inherits3.default)(_class, _think$model$mongo);function _class() {(0, _classCallCheck3.default)(this, _class);return (0, _possibleConstructorReturn3.default)(this, _think$model$mongo.apply(this, arguments));}_class.prototype.
 
-var _inherits = require('babel-runtime/helpers/inherits')['default'];
-
-var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
-
-exports.__esModule = true;
-
-var _default = (function (_think$model$mongo) {
-    _inherits(_default, _think$model$mongo);
-
-    function _default() {
-        _classCallCheck(this, _default);
-
-        _think$model$mongo.apply(this, arguments);
-    }
-
-    _default.prototype.init = function init() {
-        var _think$model$mongo$prototype$init;
-
-        for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {
-            args[_key] = arguments[_key];
-        }
-
-        (_think$model$mongo$prototype$init = _think$model$mongo.prototype.init).call.apply(_think$model$mongo$prototype$init, [this].concat(args));
+    init = function init() {var _think$model$mongo$pr;for (var _len = arguments.length, args = Array(_len), _key = 0; _key < _len; _key++) {args[_key] = arguments[_key];}
+        (_think$model$mongo$pr = _think$model$mongo.prototype.init).call.apply(_think$model$mongo$pr, [this].concat(args));
         //配置索引
         this.indexes = {
-            id: 1
-        };
-    };
+            id: 1 };
 
-    _default.prototype.addNav = function addNav() {
+    };_class.prototype.
+
+    addNav = function addNav() {
         return this.add({
             name: 'UI',
-            desc: 'UI'
-        });
-    };
+            desc: 'UI' });
 
-    return _default;
-})(think.model.mongo);
-
-exports['default'] = _default;
-module.exports = exports['default'];
+    };return _class;}(think.model.mongo);exports.default = _class;

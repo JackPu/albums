@@ -1,69 +1,48 @@
-'use strict';
+'use strict';exports.__esModule = true;var _stringify = require('babel-runtime/core-js/json/stringify');var _stringify2 = _interopRequireDefault(_stringify);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _class = function (_think$controller$bas) {(0, _inherits3.default)(_class, _think$controller$bas);function _class() {(0, _classCallCheck3.default)(this, _class);return (0, _possibleConstructorReturn3.default)(this, _think$controller$bas.apply(this, arguments));}
 
-var _inherits = require('babel-runtime/helpers/inherits')['default'];
-
-var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
-
-exports.__esModule = true;
-
-var _default = (function (_think$controller$base) {
-    _inherits(_default, _think$controller$base);
-
-    function _default() {
-        _classCallCheck(this, _default);
-
-        _think$controller$base.apply(this, arguments);
-    }
 
     /**
-     * some base method in here
-     */
-
-    _default.prototype.get = function get(key) {
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               * some base method in here
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               */_class.prototype.
+    get = function get(key) {
         if (key == undefined) {
             return this.http._get;
         }
         return this.http._get[key];
-    };
+    };_class.prototype.
 
-    _default.prototype.post = function post(key) {
+    post = function post(key) {
         if (key == undefined) {
             return this.http._post;
         }
         return this.http._post[key];
-    };
+    };_class.prototype.
 
-    _default.prototype.getCookie = function getCookie(key) {
+    getCookie = function getCookie(key) {
         if (key == undefined) {
             return '';
         }
         return this.http._cookie;
-    };
+    };_class.prototype.
 
-    _default.prototype.setCookie = function setCookie(key, val) {
+    setCookie = function setCookie(key, val) {
         if (typeof val !== 'string') {
-            val = JSON.stringify(val);
+            val = (0, _stringify2.default)(val);
         }
         return this.http._cookie[key] = val;
-    };
+    };_class.prototype.
 
-    _default.prototype.apiErrorHandle = function apiErrorHandle(errno) {
+    apiErrorHandle = function apiErrorHandle(errno) {
         var API_ERROR_MSG_TABLE = {
-            // user
+            // user 
             '101': 'user not login',
             '102': 'user email and password error',
             '111': 'password not match',
 
             // category
-            '3000': 'Category name is empty'
-        };
+            '3000': 'Category name is empty' };
+
         var msg = API_ERROR_MSG_TABLE[errno] || 'system error';
         console.log(msg);
         this.fail(errno, msg);
-    };
-
-    return _default;
-})(think.controller.base);
-
-exports['default'] = _default;
-module.exports = exports['default'];
+    };return _class;}(think.controller.base);exports.default = _class;

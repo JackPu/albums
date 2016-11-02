@@ -1,0 +1,62 @@
+<div class="components c-home" ng-init="init()">
+    <div class="m-cover">
+        <div class="over-layout"></div>
+        <div class="container">
+            <div class="profile">
+                <div class="user-info clearfix">
+                    <img class="avantar" src="/static/img/my-photos.jpg" />
+                    <div class="profile-details">
+                        <div class="username">Jack Pu</div>
+                        <div class="address"><span class="icon-location-pin"></span> Beijing China</div>
+                        <div class="social-group">
+                            <a href="" class="icon-instagram" title="instagram"></a>
+                            <a href="" class="icon-twitter" title="google-plus"></a>
+                            <a href="" class="icon-google" title="sina-weibo"></a>
+                        </div>
+                    </div>
+                
+                </div>
+                <div class="nav-list">
+                    <%category.forEach(function(item){%>
+                         <div class="item">
+                            <div class="num">
+                                <%=item['num']%>
+                            </div>
+                            <%=item['name']%>
+                        </div>
+                    <%})%>
+                   
+                </div>
+
+            </div>
+        </div>
+    </div>
+    
+    <div class="js-main">
+       
+        <div class="container">
+            <!--div class="tag-list g-hidden">
+                <%nav.forEach(function(item){%>
+                    <a href="tag"><%=item['name']%></a>
+                <%})%>
+            </div-->
+            <a href="#upload" class="btn-create-new icon-plus"></a>
+            <a href="#/user/profile" class="btn-manage icon-settings"></a>
+            <div class="posts-list">
+                <div class="post-item col-3" ng-repeat="item in list">
+                    <a href="#detail/{{item._id}}">
+                    <img alt="上传图片" ng-src="{{item.url}}" />
+                        <!--div class="like-num-wrap">
+                            <span class="icon-heart"></span>
+                            <span class="num">100</span>
+                        </div-->
+                        <div class="details">
+                            <div class="title">{{item.title}}</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</div>

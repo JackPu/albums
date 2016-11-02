@@ -1,10 +1,9 @@
 'use strict';
 /**
- * db config
- * @type {Object}
- */
-exports.__esModule = true;
-exports['default'] = {
+               * db config
+               * @type {Object}
+               */exports.__esModule = true;exports.default =
+{
   type: 'mongo',
   // host: '127.0.0.1',
   host: '127.0.0.1',
@@ -20,7 +19,4 @@ exports['default'] = {
   cache: {
     on: true,
     type: '',
-    timeout: 3600
-  }
-};
-module.exports = exports['default'];
+    timeout: 3600 } };

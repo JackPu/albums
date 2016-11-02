@@ -1,112 +1,38 @@
-'use strict';
+'use strict';exports.__esModule = true;var _assign = require('babel-runtime/core-js/object/assign');var _assign2 = _interopRequireDefault(_assign);var _regenerator = require('babel-runtime/regenerator');var _regenerator2 = _interopRequireDefault(_regenerator);var _asyncToGenerator2 = require('babel-runtime/helpers/asyncToGenerator');var _asyncToGenerator3 = _interopRequireDefault(_asyncToGenerator2);var _classCallCheck2 = require('babel-runtime/helpers/classCallCheck');var _classCallCheck3 = _interopRequireDefault(_classCallCheck2);var _possibleConstructorReturn2 = require('babel-runtime/helpers/possibleConstructorReturn');var _possibleConstructorReturn3 = _interopRequireDefault(_possibleConstructorReturn2);var _inherits2 = require('babel-runtime/helpers/inherits');var _inherits3 = _interopRequireDefault(_inherits2);
 
-var _inherits = require('babel-runtime/helpers/inherits')['default'];
+var _base = require('./base.js');var _base2 = _interopRequireDefault(_base);function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _class = function (_Base) {(0, _inherits3.default)(_class, _Base);function _class() {(0, _classCallCheck3.default)(this, _class);return (0, _possibleConstructorReturn3.default)(this, _Base.apply(this, arguments));}
 
-var _classCallCheck = require('babel-runtime/helpers/class-call-check')['default'];
-
-var _regeneratorRuntime = require('babel-runtime/regenerator')['default'];
-
-var _Object$assign = require('babel-runtime/core-js/object/assign')['default'];
-
-var _interopRequireDefault = require('babel-runtime/helpers/interop-require-default')['default'];
-
-exports.__esModule = true;
-
-var _baseJs = require('./base.js');
-
-var _baseJs2 = _interopRequireDefault(_baseJs);
-
-var _default = (function (_Base) {
-    _inherits(_default, _Base);
-
-    function _default() {
-        _classCallCheck(this, _default);
-
-        _Base.apply(this, arguments);
-    }
 
     /**
-     * index action
-     * @return {Promise} []
-     */
+                                                                                                                                                                                                                                                                                                                                                                                                     * index action
+                                                                                                                                                                                                                                                                                                                                                                                                     * @return {Promise} []
+                                                                                                                                                                                                                                                                                                                                                                                                     */_class.prototype.
+    viewAction = function () {var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {return _regenerator2.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:return _context.abrupt('return',
+                            this.display());case 1:case 'end':return _context.stop();}}}, _callee, this);}));function viewAction() {return _ref.apply(this, arguments);}return viewAction;}();_class.prototype.
 
-    _default.prototype.viewAction = function viewAction() {
-        return _regeneratorRuntime.async(function viewAction$(context$2$0) {
-            while (1) switch (context$2$0.prev = context$2$0.next) {
-                case 0:
-                    return context$2$0.abrupt('return', this.display());
 
-                case 1:
-                case 'end':
-                    return context$2$0.stop();
-            }
-        }, null, this);
-    };
+    detailAction = function () {var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {var user;return _regenerator2.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:_context2.next = 2;return (
+                                this.model('user').select());case 2:user = _context2.sent;
 
-    _default.prototype.detailAction = function detailAction() {
-        var user;
-        return _regeneratorRuntime.async(function detailAction$(context$2$0) {
-            while (1) switch (context$2$0.prev = context$2$0.next) {
-                case 0:
-                    context$2$0.next = 2;
-                    return _regeneratorRuntime.awrap(this.model('user').select());
+                            this.success(user[0]);case 4:case 'end':return _context2.stop();}}}, _callee2, this);}));function detailAction() {return _ref2.apply(this, arguments);}return detailAction;}();_class.prototype.
 
-                case 2:
-                    user = context$2$0.sent;
 
-                    this.success(user[0]);
+    cropAction = function () {var _ref3 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee3() {return _regenerator2.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:case 'end':return _context3.stop();}}}, _callee3, this);}));function cropAction() {return _ref3.apply(this, arguments);}return cropAction;}();_class.prototype.
 
-                case 4:
-                case 'end':
-                    return context$2$0.stop();
-            }
-        }, null, this);
-    };
 
-    _default.prototype.cropAction = function cropAction() {
-        return _regeneratorRuntime.async(function cropAction$(context$2$0) {
-            while (1) switch (context$2$0.prev = context$2$0.next) {
-                case 0:
-                case 'end':
-                    return context$2$0.stop();
-            }
-        }, null, this);
-    };
 
-    _default.prototype.modelAction = function modelAction() {
-        var user, model, id;
-        return _regeneratorRuntime.async(function modelAction$(context$2$0) {
-            while (1) switch (context$2$0.prev = context$2$0.next) {
-                case 0:
-                    user = JSON.parse(this.post('data'));
+    modelAction = function () {var _ref4 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee4() {var user, model, id;return _regenerator2.default.wrap(function _callee4$(_context4) {while (1) {switch (_context4.prev = _context4.next) {case 0:
+                            user = JSON.parse(this.post('data'));
+                            user.socialSites = (0, _assign2.default)({
+                                instagram: '',
+                                twitter: '',
+                                facebook: '',
+                                pinterest: '' },
+                            user['socialSites']);
 
-                    user.socialSites = _Object$assign({
-                        instagram: '',
-                        twitter: '',
-                        facebook: '',
-                        pinterest: ''
-                    }, user['socialSites']);
 
-                    model = this.model('user');
+                            model = this.model('user');
 
-                    console.log(user);
-                    context$2$0.next = 6;
-                    return _regeneratorRuntime.awrap(model.updateUser(user));
-
-                case 6:
-                    id = context$2$0.sent;
-
-                    this.success('done');
-
-                case 8:
-                case 'end':
-                    return context$2$0.stop();
-            }
-        }, null, this);
-    };
-
-    return _default;
-})(_baseJs2['default']);
-
-exports['default'] = _default;
-module.exports = exports['default'];
+                            console.log(user);_context4.next = 6;return (
+                                model.updateUser(user));case 6:id = _context4.sent;
+                            this.success('done');case 8:case 'end':return _context4.stop();}}}, _callee4, this);}));function modelAction() {return _ref4.apply(this, arguments);}return modelAction;}();return _class;}(_base2.default);exports.default = _class;

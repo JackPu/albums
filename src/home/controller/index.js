@@ -8,6 +8,14 @@ export default class extends Base {
      * @return {Promise} []
      */
     indexAction() {
+        return this.display('aboutus.html');
+    }
+  
+    categoryAction() {
+        return this.display();
+    }
+    
+    aboutusAction() {
         return this.display();
     }
     
