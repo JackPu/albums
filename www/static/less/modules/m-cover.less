@@ -81,9 +81,28 @@
         }
         a {
             display: inline-block;
+            position: relative;
             line-height: 70px;
             margin: 0 20px;
             color: #fff;
         }
+        a.active:after{
+            content:'';
+            display: inline-block;
+            position: absolute;
+            left:0;
+            width:100%;
+            bottom: 15px;
+            height: 3px;
+            background: currentcolor;
+        }
     }
 }
+
+
+
+
+
+
+
+

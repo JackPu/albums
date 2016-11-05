@@ -8,8 +8,7 @@
   },
   "scripts": {
     "start": "node www/index.js",
-    "compile": "babel --presets es2015-loose,stage-1 --plugins transform-runtime src/ --out-dir app/ --retain-lines",
-    "watch-compile": "npm run compile -- --watch",
+    "compile": "babel --presets es2015-loose,stage-1 --plugins transform-runtime src/ --out-dir app/ --retain-lines --watch",
     "build": "gulp build",
     "server": "concurrently --kill-others \"gulp watch\" \"lite-server\"",
     "test": "npm run test"

@@ -1,68 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
 <% include ../common/header.html %>
-  <body ng-app="app" ng-strict-di ng-cloak>
-    
-    <div class="m-cover no-cover">
-      <nav class="navbar navbar-default">
-        <div class="container-fluid nav-list text-center">
-          <a class="logo">JackZoo</a>
-          <a href="https://www.jackzoo.org">主页<span class="sr-only">(current)</span></a>
-          <a href="javascript:;">类目</a>
-          <!--a href="#">识趣</a>
-          <a href="#">我们</a-->
+
+    <body ng-app="app" ng-strict-di ng-cloak>
+
+        <div class="m-cover no-cover">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid nav-list text-center">
+                    <a href="https://www.jackzoo.org" class="logo">JackZoo</a>
+                    <a  href="/">主页</a>
+                    <a class="active" href="javascript:;">类目</a>
+                    <!--a href="#">识趣</a-->
+                    <a href="/index/aboutus">我们</a>
+                </div>
+            </nav>
         </div>
-      </nav>
-    </div>
-    <div class="main page-category">
-        <div class="cat-list">
-            <div class="row">
-                <a href="#" class="btn btn-primary"> 动物 </a>
+        <div class="main page-category">
+            <div class="cat-list">
+                <div class="row">
+                    <a href="#" class="btn btn-primary"> 动物 </a>
+                </div>
+                <div class="row btline" id="catlist">
+                    <div class="vertical-line" style="top:-19px;"></div>
+                    <a href="#vertebrates" data-target="vertebrates" class="btn btn-default btn-primary leftline"> 脊椎动物 </a>
+                    <a href="#invertebrates" data-target="invertebrates" class="btn btn-default rightline "> 无脊椎动物 </a>
+                </div>
+                <div class="tab-contents">
+                    <div class="tab-pane active" role="tabpanel" id="vertebrates">
+                        <div class="vertical-line" style="top:-19px;margin-left:-70px;"></div>
+                        <a href="javascript:;" id="fish" class="btn btn-default leftline"> 鱼类 </a>
+                        <a href="javascript:;" class="btn btn-default normalline"> 两栖动物 </a>
+                        <a href="javascript:;" class="btn btn-default normalline"> 爬行动物 </a>
+                        <a href="javascript:;" class="btn btn-default normalline"> 鸟类 </a>
+                        <a href="javascript:;" class="btn btn-default rightline"> 哺乳动物 </a>
+                    </div>
+                    <div class="tab-pane" role="tabpanel" id="invertebrates">
+                        <div class="vertical-line" style="top:-19px;margin-left:61px"></div>
+                        <a href="javascript:;" aria-controls="home" role="tab" class="btn btn-default leftline"> 原生动物 </a>
+                        <a href="javascript:;" class="btn btn-default normalline"> 肠腔动物 </a>
+                        <!--a href="javascript:;" class="btn btn-default normalline"> 线形动物 </a-->
+                        <a href="javascript:;" class="btn btn-default normalline"> 环节动物 </a>
+                        <a href="javascript:;" class="btn btn-default normalline"> 软体动物 </a>
+                        <a href="javascript:;" class="btn btn-default rightline"> 节肢动物 </a>
+                    </div>
+                </div>
+                <div class="row text-center">
+                    <br/> 了解
+                    <a href="https://zh.wikipedia.org/wiki/%E5%8A%A8%E7%89%A9%E5%88%86%E7%B1%BB%E8%A1%A8" target="_blank"> 更多 </a>关于<strong>动物分类</strong>的知识
+                </div>
             </div>
-            <div class="row" id="catlist">
-              <a href="#vertebrates" data-target="vertebrates" class="btn btn-default btn-primary"> 脊椎动物 </a>
-              <a href="#invertebrates" data-target="invertebrates" class="btn btn-default"> 无脊椎动物 </a>
-            </div>
-            <div class="tab-contents">
-              <div class="tab-pane active" role="tabpanel" id="vertebrates">
-                <a href="javascript:;" id="fish" class="btn btn-default"> 鱼类 </a>
-                <a href="javascript:;" class="btn btn-default"> 两栖动物 </a>
-                <a href="javascript:;" class="btn btn-default"> 爬行动物 </a>
-                <a href="javascript:;" class="btn btn-default"> 鸟类 </a>
-                <a href="javascript:;" class="btn btn-default"> 哺乳动物 </a>
-              </div>
-              <div class="tab-pane" role="tabpanel" id="invertebrates">
-                <a href="javascript:;" aria-controls="home" role="tab" class="btn btn-default"> 原生动物 </a>
-                <a href="javascript:;" class="btn btn-default"> 肠腔动物 </a>
-                <a href="javascript:;" class="btn btn-default"> 线形动物 </a>
-                <a href="javascript:;" class="btn btn-default"> 环节动物 </a>
-                <a href="javascript:;" class="btn btn-default"> 软体动物 </a>
-                <a href="javascript:;" class="btn btn-default"> 节肢动物 </a>
-              </div>
-            </div>
-           
-            
+
         </div>
-      
-    </div>
-   
-  <% include ../common/footer.html %>
-  <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>      
-  <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-  <script type="application/javascript">
-    $(function() {
-        $('#catlist a').click(function (e) {
-            e.preventDefault()
-            $('#catlist a').removeClass('btn-primary');
-            $(this).addClass('btn-primary'); 
-            var t = $(this).attr('data-target');
-            console.log(t);
-            $('.tab-pane').removeClass('active');
-            $('.tab-pane[id="' + t +'"]').addClass('active');
-             
-        })
-    })  
-  </script>      
-  </body>
+
+        <% include ../common/footer.html %>
+            <script src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+            <script src="//cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+            <script type="application/javascript">
+                $(function () {
+                    $('#catlist a').click(function (e) {
+                        e.preventDefault()
+                        $('#catlist a').removeClass('btn-primary');
+                        $(this).addClass('btn-primary');
+                        var t = $(this).attr('data-target');
+                        console.log(t);
+                        $('.tab-pane').removeClass('active');
+                        $('.tab-pane[id="' + t + '"]').addClass('active');
+
+                    })
+                })
+            </script>
+    </body>
 
 </html>

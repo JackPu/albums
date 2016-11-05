@@ -8,7 +8,7 @@ var _base = require('./base.js');var _base2 = _interopRequireDefault(_base);func
                                                                                                                                                                                                                                                                                                                                                                                                      * @return {Promise} []
                                                                                                                                                                                                                                                                                                                                                                                                      */_class.prototype.
     indexAction = function indexAction() {
-        return this.display('aboutus.html');
+        return this.display('');
     };_class.prototype.
 
     categoryAction = function categoryAction() {
