@@ -1,0 +1,86 @@
+/**page category**/
+.page-category {
+    max-width:720px;
+    padding: 120px 10px;
+    text-align: center;
+    
+    .btn{
+        position: relative;
+        border-radius: 40px;
+        padding: 6px 20px;
+        margin: 20px 10px;
+    }
+    .row{
+        position: relative;
+    }
+    .bt-border{
+        border-bottom: 1px solid #ddd;
+    }
+    .tab-pane{
+        display: none;
+        position: relative;
+        &.active{
+            display: block;
+        }
+        
+        
+        
+        
+    }
+    a.leftline:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width:auto;
+        top: -20px;
+        left: 50%;
+        right: -13px;
+        height: 2px;
+        background: #ddd;
+    }
+    
+    a.rightline:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width:auto;
+        top: -20px;
+        right: 50%;
+        left: -13px;
+        height: 2px;
+        background: #ddd;
+    }
+    a.normalline:before{
+        content: '';
+        display: block;
+        position: absolute;
+        width:auto;
+        top: -20px;
+        right: -13px;
+        left: -13px;
+        height: 2px;
+        background: #ddd;
+    }
+    .vertical-line,
+    a.leftline:after,
+    a.rightline:after,
+    a.normalline:after{
+        content: '';
+        display: block;
+        position: absolute;
+        width:2px;
+        top: -20px;
+        left: 50%;
+        margin-left: -1px;
+        height: 20px;
+        background: #ddd;    
+    }
+}
+
+
+
+
+
+
+
+

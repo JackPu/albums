@@ -4,13 +4,13 @@ var _base = require('./base.js');var _base2 = _interopRequireDefault(_base);func
 
 
 
-  viewAction = function () {var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {var id, model, data;return _regenerator2.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+  indexAction = function () {var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {var id, model;return _regenerator2.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
 
               id = this.get('id');
-              model = this.model('post');_context.next = 4;return (
-                model.queryOne(id));case 4:data = _context.sent;
-              this.assign('data', data[0]);return _context.abrupt('return',
-              this.display());case 7:case 'end':return _context.stop();}}}, _callee, this);}));function viewAction() {return _ref.apply(this, arguments);}return viewAction;}();_class.prototype.
+              model = this.model('post');
+              // let data = await model.queryOne(id);
+              //  this.assign('data', data[0]);
+              return _context.abrupt('return', this.display());case 3:case 'end':return _context.stop();}}}, _callee, this);}));function indexAction() {return _ref.apply(this, arguments);}return indexAction;}();_class.prototype.
 
 
   modelAction = function () {var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {var id, model, data;return _regenerator2.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
