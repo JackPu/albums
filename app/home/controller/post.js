@@ -13,8 +13,18 @@ var _base = require('./base.js');var _base2 = _interopRequireDefault(_base);func
               return _context.abrupt('return', this.display());case 3:case 'end':return _context.stop();}}}, _callee, this);}));function indexAction() {return _ref.apply(this, arguments);}return indexAction;}();_class.prototype.
 
 
-  modelAction = function () {var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {var id, model, data;return _regenerator2.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+
+  searchAction = function () {var _ref2 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee2() {var id, model;return _regenerator2.default.wrap(function _callee2$(_context2) {while (1) {switch (_context2.prev = _context2.next) {case 0:
+
               id = this.get('id');
-              model = this.model('post');_context2.next = 4;return (
-                model.queryOne(id));case 4:data = _context2.sent;
-              this.success(data[0]);case 6:case 'end':return _context2.stop();}}}, _callee2, this);}));function modelAction() {return _ref2.apply(this, arguments);}return modelAction;}();return _class;}(_base2.default);exports.default = _class;
+              model = this.model('post');
+              // let data = await model.queryOne(id);
+              //  this.assign('data', data[0]);
+              return _context2.abrupt('return', this.display());case 3:case 'end':return _context2.stop();}}}, _callee2, this);}));function searchAction() {return _ref2.apply(this, arguments);}return searchAction;}();_class.prototype.
+
+
+  modelAction = function () {var _ref3 = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee3() {var id, model, data;return _regenerator2.default.wrap(function _callee3$(_context3) {while (1) {switch (_context3.prev = _context3.next) {case 0:
+              id = this.get('id');
+              model = this.model('post');_context3.next = 4;return (
+                model.queryOne(id));case 4:data = _context3.sent;
+              this.success(data[0]);case 6:case 'end':return _context3.stop();}}}, _callee3, this);}));function modelAction() {return _ref3.apply(this, arguments);}return modelAction;}();return _class;}(_base2.default);exports.default = _class;

@@ -12,6 +12,16 @@ export default class extends Base {
   //  this.assign('data', data[0]);
     return this.display();
   }
+  
+  
+  async searchAction() {
+
+    let id = this.get('id');
+    let model = this.model('post');
+   // let data = await model.queryOne(id);
+  //  this.assign('data', data[0]);
+    return this.display();
+  }
 
   async modelAction() {
     const id = this.get('id');
