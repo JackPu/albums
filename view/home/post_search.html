@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<% include ../common/header.html %>
+
+  <body ng-app="app" ng-strict-di ng-cloak>
+    
+    <div class="m-cover no-cover">
+       <nav class="navbar navbar-default">
+        <div class="container-fluid nav-list text-center">
+          <a href="https://www.jackzoo.org" class="logo">JackZoo</a>
+          <a href="/">主页</a>
+          <a class="active" href="javascript:;">类目</a>
+          <!--a href="#">识趣</a-->
+          <a href="/index/aboutus">我们</a>
+        </div>
+      </nav>
+      <div class="blur-background"></div>
+     
+    </div>
+    <div class="main">
+      <form class="m-search input-group relative">
+        <input type="text" class="form-control" placeholder="动物名称|Animals Name" />
+        <span class="input-group-btn">
+          <button  class="btn btn-primary icon-search">
+            搜索
+          </button>
+        </span>
+
+      </form>
+      <div class="m-posts post-search error">
+        <div class="row text-center">
+          <img width="240" src="/static//img/cute-cat-error.jpg" />
+          <h1>未找到与 <strong>123123</strong> 相关的动物</h1>
+          
+        </div>
+        
+         
+      </div>
+      <div class="m-posts post-search">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="m-thumb">
+              <img class="thumb" alt="边境牧羊犬" src="http://img1.vued.vanthink.cn/vuedb72c319e15b599cd3d4f59a7e23eeaf0.jpeg" />
+            </div>
+            
+          </div>
+          <div class="col-md-7">
+            <h1>边境牧羊犬</h1> 
+            <div class="desc">
+              边境牧羊犬（Border Collie）原产于苏格兰边境，为柯利牧羊犬的一种，具有强烈的牧羊本能，天性聪颖、善于察言观色，能准确明白主人的指示，可借由眼神的注视而驱动羊群移动或旋转，被当成牧羊犬已有多年的历史，在世界犬种智商排行第一名。
+特点是聪明、学习能力强、理解力高...
+            </div>
+            <div class="form-group text-right">
+              <button class="btn btn-primary"><span class="icon icon-link"></span>  查看详情</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="m-posts post-search">
+        <div class="row">
+          <div class="col-md-5">
+            <div class="m-thumb">
+              <img class="thumb" alt="边境牧羊犬" src="http://img1.vued.vanthink.cn/vuedb72c319e15b599cd3d4f59a7e23eeaf0.jpeg" />
+            </div>
+            
+          </div>
+          <div class="col-md-7">
+            <h1>边境牧羊犬</h1> 
+            <div class="desc">
+              边境牧羊犬（Border Collie）原产于苏格兰边境，为柯利牧羊犬的一种，具有强烈的牧羊本能，天性聪颖、善于察言观色，能准确明白主人的指示，可借由眼神的注视而驱动羊群移动或旋转，被当成牧羊犬已有多年的历史，在世界犬种智商排行第一名。
+特点是聪明、学习能力强、理解力高...
+            </div>
+            <div class="form-group text-right">
+              <button class="btn btn-primary"><span class="icon icon-link"></span>  查看详情</button>
+            </div>
+          </div>
+        </div>
+        
+         
+      </div>
+    </div>
+    <% include ../common/footer.html %>
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> 
+    <!-- Go to www.addthis.com/dashboard to customize your tools --> <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55d88bec2ab91030"></script> 
+  </body>
+
+</html>

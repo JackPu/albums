@@ -9,20 +9,20 @@ require.config({
     baseUrl: "static/js",
    // urlArgs: App.debug != true? 'bust=' + App.version : 'bust=' + (new Date()).getTime() + Math.random() * 10000,
     paths: {
-        'jquery': 'http://s1.vued.vanthink.cn/d59f937c159f/jquery-2.2.1.min',
+        'jquery': 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.2/jquery.min',
         'base': 'base',
-        'angular': 'http://s1.vued.vanthink.cn/angular-1.5.3.min',
-        'angular-route': 'http://s1.vued.vanthink.cn/angular-route',
+        'angular': 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular.min',
+        'angular-route': 'https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.2/angular-route.min',
         'angularAMD': 'http://s1.vued.vanthink.cn/angularAMD.route.all',
-        'ui.bootstrap': 'http://s1.vued.vanthink.cn/angular.ui-bootstrap-1.3.2.min',
-        'validator': LIB_PATH + 'validator.min',
+        'ui.bootstrap': 'https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.3.2/ui-bootstrap.min',
+       //'validator': LIB_PATH + 'validator.min',
         'core.image.upload':'http://s1.vued.vanthink.cn/0f1a6c5af27d3924a0abfd751ecc1160/jquery.core.image.upload.full.min',
         'ng-progress': 'http://s1.vued.vanthink.cn/ngprogress.min',
         'ng-message':'https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.3.2/angular-messages.min',
         
     //end lib 
         'base': JS_PATH + 'base',
-        'app': 'app'
+        'app': 'admin'
     },
     shim: { 
         'angularAMD': ['angular'], 
