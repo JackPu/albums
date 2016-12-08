@@ -35,9 +35,9 @@
     apiErrorHandle = function apiErrorHandle(errno) {
         var API_ERROR_MSG_TABLE = {
             // user 
-            '101': 'user not login',
-            '102': 'user email and password error',
-            '111': 'password not match',
+            '101': '用户未登录',
+            '102': '用户密码错误',
+            '111': '密码不一致',
 
             // category
             '3000': 'Category name is empty' };

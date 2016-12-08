@@ -1,0 +1,46 @@
+<div class="componets c-user-home">
+    <div class="m-cover no-cover">
+        <nav class="navbar navbar-default">
+            <div class="container-fluid nav-list black text-center">
+                <a href="https://www.jackzoo.org" class="logo">JackZoo</a>
+                <a class="active"  href="/">内容</a>
+                <a href="javascript:;">标签</a>
+                <a href="/index/aboutus">个人</a>
+            </div>
+        </nav>
+    </div>
+    <div class="container-fluid main text-left">
+      <h3>内容</h3>
+      <form class="form navbar-form">
+        <div class="form-group">
+          <input type="search" class="form-control" />
+          <button type="button" class="btn btn-primary">搜索</button>
+          
+        </div>
+        <a href="" class="btn btn-primary pull-right"> <span class="icon icon-plus"></span> 添加</a>
+      </form>
+    </div>
+    
+  
+</div>
+<!--modal add category-->            
+ <script type="text/ng-template" id="create-cat.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create Category</h3>
+    </div>
+    <div class="modal-body">
+        <div class="m-form">
+            <div class="form-group">
+                <input type="text" ng-model="newCatName" autofocus placeholder="your category name"  class="form-control"/>
+            </div>
+            <div class="form-group">
+                <textarea ng-model="newCatDesc"  placeholder="your category description"  class="form-control" style="height:120px;"/>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+        <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+        
