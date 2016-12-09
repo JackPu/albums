@@ -1,27 +1,39 @@
 <div class="componets c-user-home">
-    <div class="m-cover no-cover">
-        <nav class="navbar navbar-default">
-            <div class="container-fluid nav-list black text-center">
-                <a href="https://www.jackzoo.org" class="logo">JackZoo</a>
-                <a class="active"  href="/">内容</a>
-                <a href="javascript:;">标签</a>
-                <a href="/index/aboutus">个人</a>
-            </div>
-        </nav>
-    </div>
+    <% include ./nav_view.html %>
     <div class="container-fluid main text-left">
       <h3>内容</h3>
       <form class="form navbar-form">
         <div class="form-group">
           <input type="search" class="form-control" />
           <button type="button" class="btn btn-primary">搜索</button>
-          
         </div>
         <a href="" class="btn btn-primary pull-right"> <span class="icon icon-plus"></span> 添加</a>
       </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th width="">照片</th>
+            <th>名称</th>
+            <th>描述</th>
+            <th>图片数量</th>
+            <th>用户</th>
+            <th>操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>123</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>
+              <a href="#post/123">详情</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    
-  
 </div>
 <!--modal add category-->            
  <script type="text/ng-template" id="create-cat.html">

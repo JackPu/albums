@@ -1,0 +1,103 @@
+<div class="componets c-user-post">
+    <% include ./nav_view.html %>
+    <div class="container-fluid main text-left">
+      
+      
+      <div class="row">
+        <a href="#home"> <span class="icon icon-home"></span> 首页</a> &gt;
+        边境牧羊犬
+        <a href="#home"> <span class="icon icon-pencil"></span> 编辑</a>
+      </div>
+      <div class="post-single">
+        <div class="m-posts post-single">
+          <div class="row">
+            <div class="col-md-5">
+              <div class="m-thumb-gallary">
+                <img class="thumb1" alt="边境牧羊犬" src="http://img1.vued.vanthink.cn/vuedb72c319e15b599cd3d4f59a7e23eeaf0.jpeg" />
+
+
+              </div>
+
+            </div>
+            <div class="col-md-7 text-left">
+              <h1>边境牧羊犬</h1> 
+              <p class="basic-info">
+                <span class="icon icon-calendar"> 2016-12-12</span>
+                <span class="icon icon-user"> Jack</span>
+                <span class="icon icon-heart"> 20178</span>
+              </p>
+              <div class="desc">
+                边境牧羊犬（Border Collie）原产于苏格兰边境，为柯利牧羊犬的一种，具有强烈的牧羊本能，天性聪颖、善于察言观色，能准确明白主人的指示，可借由眼神的注视而驱动羊群移动或旋转，被当成牧羊犬已有多年的历史，在世界犬种智商排行第一名。
+  特点是聪明、学习能力强、理解力高、容易训练、善于与人类沟通、温和、忠诚、服从性好，其忠心程度可以用如影随形来形容，由于温和忠诚的性格不乱叫，一度成为最受城市人口家养的宠儿。而且边境牧羊犬还是飞盘狗最具竞争力的犬种,是历年飞盘狗世界杯大赛的主角。
+              </div>
+              <p class="extend-link">
+                <span class="icon icon-link"></span><a href=""> 扩展阅读</a>
+              </p>
+              <div class="m-tag-list">
+                <a href="" class="tag">Tag1</a>
+              </div>
+
+            </div>
+          </div>
+          <!--div class="row">
+            <div class="share-info">
+
+              <div class="addthis_sharing_toolbox"></div>
+            </div>
+          </div-->
+          <h3>更多酷照</h3>
+          <div class="row m-thumb-gallary">
+            <div class="col-md-4 item">
+              <a href="#" class="thumb">
+                <img src="http://img1.vued.vanthink.cn/vuedd82f93920f9c5bbff75104a26ac38d9d.jpeg">
+                <div class="quote">
+                  一只边境牧羊犬在抓住一只花朵。  
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 item">
+              <a href="#" class="thumb">
+                <img src="http://img1.vued.vanthink.cn/vuedd82f93920f9c5bbff75104a26ac38d9d.jpeg">
+                <div class="quote">
+                  一只边境牧羊犬在抓住一只花朵。  
+                </div>
+              </a>
+            </div>
+            <div class="col-md-4 item">
+              <a href="#" class="thumb">
+                <img src="http://img1.vued.vanthink.cn/vuedd82f93920f9c5bbff75104a26ac38d9d.jpeg">
+                <div class="quote">
+                  一只边境牧羊犬在抓住一只花朵。  
+                </div>
+              </a>
+            </div>
+          </div>
+          <!--h3>你可能还想知道</h3-->
+
+
+        </div>
+      </div>
+      
+    </div>
+</div>
+<!--modal add category-->            
+ <script type="text/ng-template" id="create-cat.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Create Category</h3>
+    </div>
+    <div class="modal-body">
+        <div class="m-form">
+            <div class="form-group">
+                <input type="text" ng-model="newCatName" autofocus placeholder="your category name"  class="form-control"/>
+            </div>
+            <div class="form-group">
+                <textarea ng-model="newCatDesc"  placeholder="your category description"  class="form-control" style="height:120px;"/>
+            </div>
+        </div>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" type="button" ng-click="save()">Save</button>
+        <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+    </div>
+</script>
+        

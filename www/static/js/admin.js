@@ -5,9 +5,7 @@ define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
   
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
-    .when("/home", angularAMD.route({
-        templateUrl: 'home/home/view', controller: 'HomeCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'home/home.js'
-    }))
+   
     
     .when("/detail/:id", angularAMD.route({
         templateUrl: function(params){ return '/home/detail/view?id=' + params.id;}, 
@@ -23,12 +21,18 @@ define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
         templateUrl: 'user/login/view', controller: 'LoginCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/login.js'
     }))
     
-    .when("/user/home", angularAMD.route({
-        templateUrl: 'user/home/view', controller: 'HomeCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/home.js'
-    }))
+   
     
      .when("/user/register", angularAMD.route({
         templateUrl: 'user/register/view', controller: 'RegisterCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/register.js'
+    }))
+    
+     .when("/home", angularAMD.route({
+        templateUrl: 'user/home/view', controller: 'HomeCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/home.js'
+    }))
+    
+     .when("/post/:id", angularAMD.route({
+        templateUrl: 'user/post/view', controller: 'PostCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/post.js'
     }))
     
     .when("/user/profile", angularAMD.route({
