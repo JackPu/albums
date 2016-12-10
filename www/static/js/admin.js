@@ -31,11 +31,15 @@ define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
         templateUrl: 'user/home/view', controller: 'HomeCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/home.js'
     }))
     
+     .when("/tag", angularAMD.route({
+        templateUrl: 'user/tag/view', controller: 'TagCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/tag.js'
+    }))
+    
      .when("/post/:id", angularAMD.route({
         templateUrl: 'user/post/view', controller: 'PostCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/post.js'
     }))
     
-    .when("/user/profile", angularAMD.route({
+    .when("/profile", angularAMD.route({
         templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
     }))
     
@@ -66,7 +70,7 @@ define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
     
 
     
-    .otherwise({redirectTo: "/user/login"});
+    .otherwise({redirectTo: "/user/home"});
    
       //$locationProvider.html5Mode(true);   
   });

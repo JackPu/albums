@@ -1,47 +1,56 @@
 <div class="componets c-user-profile">
+    <% include ./nav_view.html %>
     <div class="cover" style="background-image:url(<%=user['cover']%>)"></div>
     <div class="user-info">
         <img class="avatar" src="/static/img/my-photos.jpg" />
-        <div class="username"><%=user['username']%></div>
-        <div class="address"><span class="icon-location-pin"></span> <%=user['address']%></div>
-        <div class="social-group">
-            <a href="" class="icon-instagram" title="instagram"></a>
-            <a href="" class="icon-twitter" title="google-plus"></a>
-            <a href="" class="icon-google" title="sina-weibo"></a>
-        </div>
-        <div class="quote">
-            <%=user['desc']%>      
-        </div>
-        <div class="text-center">
-            <a href="#/user/edit"  class="btn btn-primary">Edit Profile</A>    
-        </div>
-    </div>
-    <div class="settings-nav">
+        <p class="username"><%=user['username']%></p>
+        <p class="email"><span class="icon-email"></span> <%=user['email']%></p>
         
-        <a href="">Category</a> 
-        <a href="">Tags</a>
+    </div>
+    <div class="settings-nav btn-group">
+      <button type="button" class="btn btn-default"> 修改昵称 </button>
+      <button type="button" class="btn btn-default"> 修改密码 </button>
+      <button type="button" class="btn btn-default"> 修改头像 </button>
+      <button type="button" class="btn btn-default"> 退出登录 </button>
     </div>
     <div class="contents">
+      <div class="form-edit-user">
+        <form class="form-group">
+          <div class="form-group">
+            <label for="username">用户昵称</label>
+            <input name="username" type="text" class="form-control" />
+          </div>  
+          <div class="form-group">
+            <button class="btn btn-primary"> 保存 </button>
+          </div> 
+        </form>
+        <form class="form-group">
+          <div class="form-group">
+            <label for="username">当前密码</label>
+            <input name="password" type="text" class="form-control" />
+          </div>  
+           <div class="form-group">
+            <label for="username">新密码</label>
+            <input name="password" type="text" class="form-control" />
+          </div>
+           <div class="form-group">
+            <label for="username">重复密码</label>
+            <input name="password" type="text" class="form-control" />
+          </div>
+          <div class="form-group">
+            <button class="btn btn-primary"> 保存 </button>
+          </div> 
+        </form>
+        <form class="form-group text-center">
+          <div class="form-group">
+            <p><img class="avatar" src="/static/img/my-photos.jpg" /></p>
+          </div>  
+          <div class="form-group">
+            <div class="btn btn-primary"> 修改头像 </div>
+          </div> 
+        </form>
+      </div>   
         
-        <div class="edit-navigation">
-            <form action="post">
-                <%category.forEach(function(item){%>
-                <div class="form-group">
-                    <div class="input-group">
-                        
-                        <input type="text" class="form-control" value="<%=item['name']%>" id="exampleInputAmount" placeholder="category">
-                        <a href="javascirpt:;" class="input-group-addon" ng-click="editCatEvent('<%=item['_id']%>','<%=item['name']%>','<%=item['desc']%>')"><span class="icon-pencil"></span></a>
-                        <a href="javascirpt:;" class="input-group-addon" ng-click="removeCatEvent('<%=item['_id']%>','<%=item['name']%>')"><span class="icon-close"></span></a>
-                        
-                    </div>
-                </div>
-                <%})%>
-                <div class="form-group">
-                    <button type="button" class="btn btn-primary form-control" ng-click="cerateCatEvent()">添加分类</button>
-                </div>
-                
-            </form>
-        </div>
     </div>
 </div>
 <!--modal add category-->            
