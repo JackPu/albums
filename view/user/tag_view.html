@@ -1,0 +1,76 @@
+<div class="componets c-user-home" ng-init="init()">
+  <% include ./nav_view.html %>
+    <div class="container-fluid main text-left">
+      <h3>标签管理</h3>
+      <form class="form navbar-form">
+        <div class="form-group">
+          <input type="search" class="form-control" ng-model="keyword"/>
+          <button type="button" class="btn btn-default" ng-click="search()"><span class="icon icon-search"></span>
+          </button>
+        </div>
+        <a href="javascript:;" ng-click="addEvent()" class="btn btn-primary pull-right btn-rds"> <span class="icon icon-plus"></span> 添加标签</a>
+      </form>
+      <table class="table">
+        <thead>
+          <tr>
+            <th>名称</th>
+            <th>描述</th>
+            <th>数量</th>
+            <th width="140">操作</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="item in list">
+            <td>{{item.name}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.count}}</td>
+            <td>
+              <a href="#post/123" target="_blank">详情</a>
+              <a href="javascript:;" ng-click="editEvent()">编辑</a>
+              <a href="javascript:;" ng-click="removeEvent()">删除</a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <ul uib-pagination total-items="list" previous-text="<" next-text=">" ng-model="pageno" ng-change="pageChanged()"></ul>
+    </div>
+</div>
+<!--modal add category-->
+<script type="text/ng-template" id="new.html">
+  <div class="modal-header">
+    <h3 class="modal-title">添加标签</h3>
+  </div>
+  <div class="modal-body">
+    <form name="formtag" class="m-form">
+      <div class="form-group">
+        <input type="text" name="name" ng-model="tag.name" autofocus placeholder="标签名称" required maxlength="20" class="form-control" />
+        <div ng-messages="formtag.name.$error" role="alert" ng-if="edit.username.$touched">
+          <p ng-message="maxlength">不能超过20个字符</p>
+          <p ng-message="required">必须填写</p>
+        </div>
+      </div>
+      <div class="form-group">
+        <textarea name="contents" ng-model="tag.contents" placeholder="标签描述" class="form-control" maxlength="120" style="height:120px;" />
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="tag.name.length==0" type="button" ng-click="save()">创建</button>
+    <button class="btn btn-default" type="button" ng-click="cancel()">取消</button>
+  </div>
+</script>
+  
+<!--modal add category-->
+<script type="text/ng-template" id="confirm.html">
+  <div class="modal-header">
+    <h3 class="modal-title">警告</h3>
+  </div>
+  <div class="modal-body">
+    <span class="icon-error-clsoe icon-close"></span>
+    <p>确认删除 <strong>{{name}}</strong> 吗？ </p>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" ng-disabled="tag.name.length==0" type="button" ng-click="save()">确定</button>
+    <button class="btn btn-default" type="button" ng-click="cancel()">取消</button>
+  </div>
+</script>

@@ -11,6 +11,10 @@ export default class extends think.model.mongo {
             id: 1,
         }
     }
+  
+    search(q,page) {
+      return this.page(page,20).countSelect();
+    }
     
     
     queryOne(id) {
