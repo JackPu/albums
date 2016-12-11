@@ -19,7 +19,6 @@ export default class extends think.model.mongo{
   }
 
   addTag(tag) {
-    //console.log(tag);
     return this.add(tag);
   }
   
@@ -28,7 +27,6 @@ export default class extends think.model.mongo{
   }
   
   removeTag(id) {
-    //console.log(tag);
     return this.where({'_id':id}).delete();
   }
   

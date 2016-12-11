@@ -13,7 +13,10 @@ export default class extends think.model.mongo {
     }
   
     search(q,page) {
-      return this.page(page,20).countSelect();
+      if(q) {
+        q = new RegExp(q,'i');
+      }
+      return this.where({'name':{ $regex: q}}).page(page, 20).countSelect();
     }
     
     

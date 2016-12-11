@@ -35,7 +35,7 @@ export default class extends Base {
       'name': this.post('name'),
       'contents': this.post('contents'),
     }
-    let m = this.model('tag');
+    let m = this.model('tag'); 
     let res = await m.updateTag(id,data);
     if(res) {
       this.success('');

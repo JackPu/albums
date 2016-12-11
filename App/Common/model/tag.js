@@ -19,7 +19,6 @@
   };_class.prototype.
 
   addTag = function addTag(tag) {
-    //console.log(tag);
     return this.add(tag);
   };_class.prototype.
 
@@ -28,6 +27,5 @@
   };_class.prototype.
 
   removeTag = function removeTag(id) {
-    //console.log(tag);
     return this.where({ '_id': id }).delete();
   };return _class;}(think.model.mongo);exports.default = _class;
