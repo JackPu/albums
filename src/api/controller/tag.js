@@ -29,7 +29,7 @@ export default class extends Base {
     }
   }
   
-  async editAction() {
+  async editAction() {e
     let id = this.post('id');
     let data = {
       'name': this.post('name'),
