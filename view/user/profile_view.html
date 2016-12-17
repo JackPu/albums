@@ -5,16 +5,17 @@
         <img class="avatar" src="/static/img/my-photos.jpg" />
         <p class="username"><%=user['username']%></p>
         <p class="email"><span class="icon-email"></span> <%=user['email']%></p>
-        
+        <p ng-hide="isEdit"><button class="btn btn-primary btn-rds" ng-click="isEdit = !isEdit">编辑个人信息</button></p>
+        <p ng-show="isEdit"><button class="btn btn-primary btn-rds" ng-click="isEdit = !isEdit">取消编辑</button></p>
     </div>
-    <div class="settings-nav btn-group">
-      <button type="button" class="btn btn-default"> 修改昵称 </button>
-      <button type="button" class="btn btn-default"> 修改密码 </button>
-      <button type="button" class="btn btn-default"> 修改头像 </button>
-      <button type="button" class="btn btn-default"> 退出登录 </button>
+    <div class="settings-nav btn-group" ng-show="isEdit">
+      <button type="button" class="btn btn-default" ng-class="{'active':cat==1}" ng-click="changeCat('1')"> 修改昵称 </button>
+      <button type="button" class="btn btn-default" ng-class="{'active':cat==2}" ng-click="changeCat('2')"> 修改密码 </button>
+      <button type="button" class="btn btn-default" ng-class="{'active':cat==3}" ng-click="changeCat('3')"> 修改头像 </button>
+      <button type="button" class="btn btn-default" ng-click="logout()"> 退出登录 </button>
     </div>
-    <div class="contents">
-      <div class="form-edit-user">
+    <div class="contents" ng-show="isEdit">
+      <div class="form-edit-user" ng-show="cat==1">
         <form class="form-group">
           <div class="form-group">
             <label for="username">用户昵称</label>
@@ -24,7 +25,7 @@
             <button class="btn btn-primary"> 保存 </button>
           </div> 
         </form>
-        <form class="form-group">
+        <form class="form-update-pass" ng-show="cat==2">
           <div class="form-group">
             <label for="username">当前密码</label>
             <input name="password" type="text" class="form-control" />
@@ -41,7 +42,7 @@
             <button class="btn btn-primary"> 保存 </button>
           </div> 
         </form>
-        <form class="form-group text-center">
+        <form class="form-group text-center" ng-show="cat==3">
           <div class="form-group">
             <p><img class="avatar" src="/static/img/my-photos.jpg" /></p>
           </div>  
@@ -96,17 +97,17 @@
 </script>
         
 <!--modal confirm delete-->            
- <script type="text/ng-template" id="remove-cat.html">
+ <script type="text/ng-template" id="logout.html">
     <div class="modal-header">
-        <h3 class="modal-title">Detele this category?</h3>
+        <h3 class="modal-title">再次确认</h3>
     </div>
     <div class="modal-body">
         <div class="m-form">
-            <p>Are You sure delete this <strong>{{::catname}}</strong> category?</p>
+            <p>确定退出当前页面？</p>
         </div>
     </div>
     <div class="modal-footer">
-        <button class="btn btn-primary" type="button" ng-click="done()">Save</button>
-        <button class="btn btn-default" type="button" ng-click="cancel()">Cancel</button>
+        <button class="btn btn-primary" type="button" ng-click="done()">继续</button>
+        <button class="btn btn-default" type="button" ng-click="cancel()">放弃</button>
     </div>
 </script>
