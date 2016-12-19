@@ -1,6 +1,6 @@
-// detail.js
+// add.js
 define(['app'], function (app) {
-  app.controller('LoginCtrl', function ($scope, $routeParams, $http, $location) {
+  app.controller('AddCtrl', function ($scope, $routeParams, $http, $location) {
 
     var modules = {
 
@@ -27,10 +27,10 @@ define(['app'], function (app) {
           data: this.user,
           type: 'post',
           success: function (result) {
-            if (result.errno == 0) {
-              App.sendMessage('登录成功！');
-              localStorage.accessInfo = JSON.stringify(result.data);
-              location = '/user#/home';
+            if (result.errcode == 0) {
+              App.sendMessage('Sign In Successfully');
+              
+              location = '/user#home';
               
             } else {
               App.sendMessage(result.errmsg);

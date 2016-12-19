@@ -16,17 +16,21 @@ var _blueimpMd = require('blueimp-md5');var _blueimpMd2 = _interopRequireDefault
         return this.display();
     };_class.prototype.
 
-    modelAction = function () {var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {var email, pass, model, user, timeNow;return _regenerator2.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
+    modelAction = function () {var _ref = (0, _asyncToGenerator3.default)(_regenerator2.default.mark(function _callee() {var email, pass, model, user, timeNow, userInfo;return _regenerator2.default.wrap(function _callee$(_context) {while (1) {switch (_context.prev = _context.next) {case 0:
                             email = this.post('email');
                             pass = this.post('pass');
                             pass = (0, _blueimpMd2.default)(pass);
                             model = this.model('user');_context.next = 6;return (
                                 model.checkLogin(email, pass));case 6:user = _context.sent;
-                            console.log(user);
                             if (user.length == 1) {
                                 timeNow = (new Date().getTime() / 1000 + 30 * 24 * 3600).toString(36);
                                 model.updateToken(timeNow, email);
-                                this.success(user);
+                                userInfo = {
+                                    token: user[0]['token'] + '.' + user[0]['_id'],
+                                    username: user[0]['username'],
+                                    avatar: user[0]['avatar'] };
+
+                                this.success(userInfo);
                             } else {
                                 this.apiErrorHandle(102);
-                            }case 9:case 'end':return _context.stop();}}}, _callee, this);}));function modelAction() {return _ref.apply(this, arguments);}return modelAction;}();return _class;}(_base2.default);exports.default = _class;
+                            }case 8:case 'end':return _context.stop();}}}, _callee, this);}));function modelAction() {return _ref.apply(this, arguments);}return modelAction;}();return _class;}(_base2.default);exports.default = _class;

@@ -39,6 +39,10 @@ define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
         templateUrl: 'user/post/view', controller: 'PostCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/post.js'
     }))
     
+     .when("/post/add", angularAMD.route({
+        templateUrl: 'user/add/view', controller: 'AddCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/add.js'
+    }))
+    
     .when("/profile", angularAMD.route({
         templateUrl: 'user/profile/view', controller: 'ProfileCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/profile.js'
     }))

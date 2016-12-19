@@ -24,6 +24,15 @@ export default class extends think.controller.base {
         }
         return this.http._cookie
     }
+  
+    decodeToken(token) {
+      let id = token.substring(token.lastIndexOf('.'));
+      token = token.replace(id+'.','');
+      return {
+        id: id,
+        token: token,
+      }
+    }
     
     setCookie(key,val) {
         if(typeof val !==  'string') {

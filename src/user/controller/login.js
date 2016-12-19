@@ -22,11 +22,15 @@ export default class extends Base {
         pass = md5(pass);
         let model = this.model('user');
         let user = await model.checkLogin(email,pass);
-        console.log(user);
         if(user.length == 1) {
             var timeNow = ((new Date()).getTime() / 1000 + 30 * 24 * 3600).toString(36);
             model.updateToken(timeNow,email);
-            this.success(user);
+            let userInfo = {
+              token: user[0]['token'] + '.' + user[0]['_id'],
+              username:user[0]['username'],
+              avatar: user[0]['avatar'],
+            };
+            this.success(userInfo);
         }else{
             this.apiErrorHandle(102);
         }

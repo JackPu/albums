@@ -1,0 +1,51 @@
+<div class="components c-upload" ng-init="init()">
+    <div class="hd"></div>
+    <div class="main" style="max-width:720px;">
+        <div class="black">
+            <div class="m-form" ng-hide="id">
+                <h3>创建图片      
+                
+                </h3>
+                <div class="btn-upload-image" ng-hide="formData.url">
+                </div>
+                <div class="preview-image" ng-show="formData.url">
+                    <img alt="上传图片" ng-src="{{formData.url}}" />
+                    <div class="btn-remove-image icon-close"></div>
+                </div>
+                <div class="form-group">
+                    <input type="text" ng-model="formData.title" class="form-control" placeholder="title" />
+                </div>
+
+                <div class="form-group">
+                    <textarea ng-model="formData.contents" placeholder="your Description 140" class="textarea form-control" style="height:180px;"></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="hidden" ng-model="formData.nav_id" />
+                    <select class="form-control" ng-model="formData.nav">
+                        <option value="">select categogry</option>
+                        <%category.forEach(function(item){%>
+                             <option value="<%=item['_id']%>"><%=item['name']%></option> 
+                        <%})%>
+                    </select>
+                </div>
+                <div class="form-group text-center">
+                    <button type="submit" ng-click="save($event)"  class="btn btn-primary">Create One</button>
+                </div>
+
+
+            </div>
+                    
+            <div class="m-form form-done" ng-show="id">
+                <div class="checkmark-wrap">
+                    <svg class="checkmark"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 52 52"><circle class="checkmark-circle" cx="26" cy="26" r="25" fill="none"/><path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/></svg>
+                </div>
+                <div class="form-group btn-list">
+                    <a class="btn btn-primary" href="#detail/{{id}}">查看详情</a>
+                    <a class="btn btn-default" href="#home">返回首页</a>
+                </div>
+            </div>        
+
+        </div>
+
+    </div>
+</div>    
