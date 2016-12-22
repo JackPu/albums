@@ -41,10 +41,6 @@ define(['app'], function (app) {
 
 
 
-
-
-
-
     };
 
     return angular.extend($scope, modules);
