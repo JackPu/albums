@@ -1,7 +1,7 @@
 // 入口文件
-define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
+define(['angularAMD','ui.bootstrap','ng-message','angular.core.upload'], function (angularAMD) {
     
-  var app = angular.module("webapp", ['ngRoute','ui.bootstrap','Vued.directives.pagination','ngProgress','ngMessages']);
+  var app = angular.module("webapp", ['ngRoute','ui.bootstrap','Vued.directives.pagination','ngProgress','ngMessages','van.core.upload']);
   
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
@@ -37,7 +37,7 @@ define(['angularAMD','ui.bootstrap','ng-message'], function (angularAMD) {
         templateUrl: 'user/post/view', controller: 'PostCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/post.js'
     }))
     
-     .when("/post/add", angularAMD.route({
+     .when("/add", angularAMD.route({
         templateUrl: 'user/add/view', controller: 'AddCtrl', controllerUrl: ANGULAR_CTRL_PATH + 'user/add.js'
     }))
     

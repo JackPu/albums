@@ -5,7 +5,7 @@
       
       <div class="m-form" ng-hide="id">
         <h3>添加动物</h3>
-        <div class="btn-upload-image" ng-hide="formData.url"></div>
+        <div class="btn-upload-image" van-core-upload url="upload.php" input-of-file="image" on-success-upload="upload" />
         <div class="preview-image" ng-show="formData.url">
           <img alt="上传图片" ng-src="{{formData.url}}" />
           <div class="btn-remove-image icon-close"></div>
