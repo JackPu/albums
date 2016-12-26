@@ -18,7 +18,8 @@ require.config({
     //'validator': LIB_PATH + 'validator.min',
     'angular.core.upload': '/static/js/lib/angular.core.upload.min',
     'ng-progress': 'http://s1.vued.vanthink.cn/ngprogress.min',
-    'ng-message': 'https://cdnjs.cloudflare.com/ajax/libs/angular-messages/1.3.2/angular-messages.min',
+    'ng-message': 'http://s1.vued.vanthink.cn/0c567b6c3a68/angular-messages.min',
+    'ng-tag-input': 'http://s1.vued.vanthink.cn/cca0cea1cb2d/ng-tags-input.min',
     'jquery.core.image.upload': 'http://s1.vued.vanthink.cn/088efe51dcc0/jquery.core.image.upload.full.min',
 
     //end lib 

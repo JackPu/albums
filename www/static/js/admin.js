@@ -1,7 +1,7 @@
 // 入口文件
-define(['angularAMD','ui.bootstrap','ng-message','angular.core.upload'], function (angularAMD) {
+define(['angularAMD','ui.bootstrap','ng-message','ng-tag-input'], function (angularAMD) {
     
-  var app = angular.module("webapp", ['ngRoute','ui.bootstrap','Vued.directives.pagination','ngProgress','ngMessages','van.core.upload']);
+  var app = angular.module("webapp", ['ngRoute','ui.bootstrap','Vued.directives.pagination','ngProgress','ngMessages','ngTagsInput']);
   
   app.config(function ($routeProvider,$locationProvider) {
     $routeProvider
