@@ -10,4 +10,7 @@ export default {
     // tag
   
     '4000': '创建失败',
+  
+    // image upload
+    '5000': '图片上传错误',
 }

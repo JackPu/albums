@@ -1,5 +1,5 @@
 // add.js
-define(['app'], function (app) {
+define(['app','jquery.core.image.upload'], function (app) {
   app.controller('AddCtrl', function ($scope, $routeParams, $http, $location) {
 
     
@@ -7,6 +7,14 @@ define(['app'], function (app) {
 
 
     $scope.init = function () {
+      $(".btn-upload-image").coreImageUpload ({
+        url: "/api/upload/crop",
+        inputOfFile: 'image',
+        enableCrop:true,
+        uploadedCallback: function (result) {
+            $scope.uploaded(result);
+        }
+      });
       
     };
     
